@@ -1,6 +1,6 @@
 package dataConstruct_20.other.test2;
 
-import other.test1.B;
+import dataConstruct_20.other.test1.B;
 public class B3 extends B {
     public void m() {
 //        int n=y; //[3]  正确  y被protected修饰，protected修饰的属性以及方法只能被类本身的方法及子类访问，即使子类在不同的包中也可以访问。因B1是B的子类，所以y可被访问。
