@@ -75,7 +75,7 @@ public class QuickSort {
         }
         //加入只剩下最后两个不管是3
         exch(arr, l, j);
-
+        //System.out.println("1111111111111");
         return j;
     }
 
