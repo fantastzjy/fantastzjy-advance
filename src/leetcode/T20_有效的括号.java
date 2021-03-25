@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;
 
-public class T20 {
+public class T20_有效的括号 {
 
     public boolean isValid(String s) {
 
