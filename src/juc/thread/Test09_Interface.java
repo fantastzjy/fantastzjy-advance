@@ -2,26 +2,26 @@ package juc.thread;
 
 /**
  * java8特点：
- * 非函数式接口能包含‘多个’未实现方法，函数式不可以
- * java8中可以写’多个‘未实现方法的实现，但是要写default关键字， java7 不可以
- * 接口中普通方法不能写实现，如果想要写实现必须加上static关键字
+ * 非函数式接口能包含‘多个’未实现方法，
+ *  函数式（加了@FunctionalInterface）就只能写一个未实现方法
+ * java8中可以写’多个‘方法的实现，但是要写default关键字， java7 不可以有方法的实现
+ * 接口中普通方法要想写实现必须加上static关键字  可以是 static
  */
 
-//@FunctionalInterface  函数式接口注解
+//@FunctionalInterface  //函数式接口注解
 public interface Test09_Interface {
 
     public void a();
 
     public void b();
 
-    default public void c() {
-
+    default void c() {
+        int q = 0;
     }
 
-    default public void d() {
+    default void d() {
 
     }
-
 
     public static void e() {
 

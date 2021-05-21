@@ -17,7 +17,6 @@ public class CyclicBarrierDemo {
 		for (int i = 1; i <= 7; i++) {
 			new Thread(() -> {
 				try {
-
 					Random random = new Random();
 					try {
 						Thread.sleep(random.nextInt(10) * 1000);
@@ -31,7 +30,6 @@ public class CyclicBarrierDemo {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-
 			}, String.valueOf(i)).start();
 		}
 

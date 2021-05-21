@@ -18,8 +18,7 @@ public class Test07_NumPrintForCondition {
 				testNumPrint.print0();
 			}
 		},"打印0的线程2").start();
-		
-		
+
 		// 打印1的线程1
 		new Thread(()->{
 			for (int i = 0; i < 5; i++) {

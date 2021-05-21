@@ -1,8 +1,6 @@
 package juc.syn;
 
 /**
- * `
- *
  * @author xialei
  * @Description: 一个线程写入, 100个线程读取
  */
@@ -27,6 +25,5 @@ public class ReadWriteLockDemo {
                 myQueue.readObj();
             }, "同学小" + i).start();
         }
-
     }
 }

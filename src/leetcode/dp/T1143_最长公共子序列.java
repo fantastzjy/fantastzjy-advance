@@ -1,0 +1,50 @@
+package leetcode.dp;
+
+import java.util.Arrays;
+
+public class T1143_最长公共子序列 {
+
+    int[][] dp;
+    int m;
+    int n;
+
+    public int longestCommonSubsequence(String text1, String text2) {
+
+        dp = new int[m=text1.length()][n=text2.length()];
+
+        for (int i = 0; i < m; i++) {
+            Arrays.fill(dp[i], -1);
+        }
+
+        //i j =0 表示 从0 开始   这里的
+        return longestCommonSubsequence(text1, 0, text2, 0);
+
+    }
+
+    private int longestCommonSubsequence(String text1, int i, String text2, int j) {
+
+        if (m== i || n == j) {
+            return 0;
+        }
+        if (dp[i][j] != -1) {
+            return dp[i][j];
+        }
+
+
+        if (text1.charAt(i) == text2.charAt(j)) {
+            return 1 + longestCommonSubsequence(text1, i + 1, text2, j + 1);
+        } else {
+
+            return dp[i][j] = Math.max(
+                    longestCommonSubsequence(text1, i + 1, text2, j),
+                    longestCommonSubsequence(text1, i, text2, j + 1)
+            );
+
+        }
+
+
+    }
+
+
+}
+

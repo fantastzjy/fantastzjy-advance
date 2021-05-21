@@ -3,7 +3,7 @@ package juc.thread;
 public class Test06_NumPrint {
 
 	public static void main(String[] args) {
-		
+
 		NumPrint testNumPrint =new NumPrint();
 		
 		// 打印0的线程1
