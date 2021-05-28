@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.链表;
 
 public class T83_删除排序链表中的重复元素 {
 

@@ -1,40 +1,33 @@
-package leetcode;
+package leetcode.链表;
 
-public class T142_环形链表II {
+public class T142_2 {
 
     public ListNode detectCycle(ListNode head) {
-
-        //不管何时都要进行判断是否为null
-        if (head==null) {
+        ListNode slow = head;
+        ListNode fast = head;
+        boolean isCir = false;
+        if (head == null) {
             return null;
         }
-        ListNode fast = head;
-        ListNode slow = head;
-        boolean isCir=false;
-
         while (fast.next != null && fast.next.next != null) {
-            fast = fast.next.next;
             slow = slow.next;
-            if (fast==slow) {
+            fast = fast.next.next;
+            if (slow == fast) {
                 isCir = true;
                 break;
             }
         }
 
+
         if (!isCir) {
             return null;
         }
-
-        //要把快或者慢指针移到开头
         fast = head;
-        //然后一步一步走
-        while (fast!=slow) {
+        while (fast != slow) {
             fast = fast.next;
             slow = slow.next;
         }
 
         return fast;
     }
-
-
 }

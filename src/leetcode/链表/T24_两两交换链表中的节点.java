@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.链表;
 
 public class T24_两两交换链表中的节点 {
 

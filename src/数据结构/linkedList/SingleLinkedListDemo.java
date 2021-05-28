@@ -1,4 +1,4 @@
-package linkedList;
+package 数据结构.linkedList;
 
 //package linkedList;
 

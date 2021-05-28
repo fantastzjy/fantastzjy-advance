@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.链表;
 
 public class T206_反转链表 {
 
@@ -20,9 +20,10 @@ public class T206_反转链表 {
             pre = curr;
             curr = next;
         }
-
         return pre;
     }
 
-
 }
+
+
+

@@ -1,4 +1,5 @@
-package leetcode;
+package leetcode.链表;
+
 
 import java.util.HashSet;
 import java.util.Set;
@@ -40,16 +41,16 @@ public class T141_环形链表 {
 
     //方法一：哈希表
 
-        public boolean hasCycle2(ListNode head) {
-            Set<ListNode> seen = new HashSet<ListNode>();
-            while (head != null) {
-                if (!seen.add(head)) {
-                    return true;
-                }
-                head = head.next;
+    public boolean hasCycle2(ListNode head) {
+        Set<ListNode> seen = new HashSet<ListNode>();
+        while (head != null) {
+            if (!seen.add(head)) {
+                return true;
             }
-            return false;
+            head = head.next;
         }
+        return false;
+    }
 
     //时间复杂度：O(N)
     //空间复杂度：O(N)，其中 N 是链表中的节点数

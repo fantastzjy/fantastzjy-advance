@@ -1,4 +1,8 @@
-package leetcode;
+package leetcode.链表;
+
+//两个循环确定要翻转的区间
+//额外定义几个指针用作暂存边界位置节点
+//前面用pre curr标记 后面用next标记 当区间返转完 pre走到了区间的最后一个节点
 
 public class T92_反转链表II {
 
@@ -9,6 +13,7 @@ public class T92_反转链表II {
         ListNode next = head;
         ListNode pre2 = null;
         ListNode curr2 = null;
+
 
         for (int i = 1; i < left; i++) {
             pre = curr;
