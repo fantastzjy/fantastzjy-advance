@@ -11,8 +11,8 @@ public class T92_2 {
         ListNode next = null;
 
         //注意这里要从1开始了（题目给出示例）
-        //如果没有进入该循环 pre2 也会是null  后面根据pre2是否为null 二确定最终的头结点
-        //要让他们都在正确的位置上 curr才开始指向得就是 head
+        //如果没有进入该循环 pre2 也会是null  后面根据pre2是否为null 来确定最终的头结点
+        //要让他们都在正确的位置上 curr才开始指向得就是 head 进入一次循环 curr前进一步  假如left=5   就会进入四次循环 1+4=5
 
         for (int i = 1; i < left; i++) {
             pre = curr;

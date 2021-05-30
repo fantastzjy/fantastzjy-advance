@@ -2,7 +2,7 @@ package leetcode;
 
 import java.util.PriorityQueue;
 
-public class T703数据流中的第K大元素 {
+public class T703_数据流中的第K大元素 {
     class KthLargest {
         PriorityQueue<Integer> pq;
         int k;

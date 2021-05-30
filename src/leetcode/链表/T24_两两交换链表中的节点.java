@@ -31,7 +31,8 @@ public class T24_两两交换链表中的节点 {
 
         //为什么要返回dummy.next呢  因为 dummy.next 指向的已经不是head节点 而是交换之后的 真正的头结点
         // 之前疑惑在返回dummy.next 就是才开始定义的head  错认为是不正确的   但是忽略了 在while循环中已经交换过了
+        //“虽然dummy不直接参与交换 但是当curr等于dummy时 已经代替完成了交换 前两个交换完头结点n2指向  curr 也就是 指向dummy ”
         return dummy.next;
-        //return dummy2;
+
     }
 }

@@ -11,7 +11,6 @@ public class T61_旋转链表 {
 
         //n初始值为1 在第一个位置上停着 进入一次循环就会行前走一步
         // 走到最后一个节点就正好是长度  停在最后一个节点上
-
         int n = 1;
         ListNode iterator = head;
         while (iterator.next != null) {
@@ -40,8 +39,6 @@ public class T61_旋转链表 {
     }
     //題解來自
     //https://leetcode-cn.com/problems/rotate-list/solution/xuan-zhuan-lian-biao-by-leetcode-solutio-woq1/
-
-
 
 
     //我的解法没解出来

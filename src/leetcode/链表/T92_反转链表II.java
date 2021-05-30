@@ -29,7 +29,6 @@ public class T92_反转链表II {
         //curr = curr.next;
         //next = curr;
 
-        //遍历一遍 pre前进一步   到最后如果是等于子链表长度的话正好走到 子链表的最后一个 curr和next指向翻转链表后面范围之外的链表
         //for (int i = left; i < right; i++) {
         for (int i = left; i <= right; i++) {
             next = curr.next;
@@ -57,9 +56,5 @@ public class T92_反转链表II {
 
         return head;
     }
-
-    //思考
-    //是我考虑多了
-
 
 }
