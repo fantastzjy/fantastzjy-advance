@@ -5,7 +5,6 @@ import java.util.Queue;
 
 public class 层级遍历二叉树 {
 
-
     void traverse(TreeNode root) {
         if (root == null) {
             return;

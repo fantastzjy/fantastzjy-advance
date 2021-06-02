@@ -1,4 +1,4 @@
-package algorithms.q;
+package leetcode.algorithms.分支法;
 
 /**
  * 物品编号和单位重量价值载体。

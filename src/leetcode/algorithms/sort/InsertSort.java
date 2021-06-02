@@ -1,4 +1,4 @@
-package algorithms.sort;
+package leetcode.algorithms.sort;
 
 public class InsertSort {
 

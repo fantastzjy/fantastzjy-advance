@@ -1,4 +1,4 @@
-package algorithms.q;
+package leetcode.algorithms.分支法;
 
 import java.util.Comparator;
 

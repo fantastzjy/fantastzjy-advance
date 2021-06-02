@@ -1,4 +1,4 @@
-package algorithms;
+package leetcode.algorithms;
 
 /**
  * 最优装载问题（贪心算法）

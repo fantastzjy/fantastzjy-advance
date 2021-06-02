@@ -7,8 +7,7 @@ import java.util.List;
 public class T15三数之和 {
 
     /**
-     *
-     * 排序+双指针
+     *排序+双指针
      * 两层for循环嵌套一个判断
      *
      */
@@ -59,7 +58,6 @@ public class T15三数之和 {
         }
         return ans;
     }
-
 
     //法二  类似 两数之和
 

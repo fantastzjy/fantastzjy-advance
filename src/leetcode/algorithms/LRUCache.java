@@ -1,4 +1,4 @@
-package algorithms;
+package leetcode.algorithms;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -76,11 +76,12 @@ public class LRUCache {
             //tail.prev = node;  不是这个 添加到头  和尾没关系
         }
 
+
         // 4.删除节点
         public void removeNode(Node<K, V> node) {
             node.next.prev = node.prev;
             node.prev.next = node.next;
-            node.prev = null;
+            node.prev = null;    //这俩不用置为null吧！！！！
             node.next = null;
         }
 
@@ -92,8 +93,11 @@ public class LRUCache {
 
 
     //LRUCache属性
+    //指定大小
     private int capacity;
+    //负责hash查找
     Map<Integer, Node<Integer, Integer>> map;
+    //负责存储
     DoubleLinkedList<Integer, Integer> doubleLinkedList;
 
 
@@ -102,6 +106,7 @@ public class LRUCache {
         map = new HashMap<>();
         doubleLinkedList = new DoubleLinkedList<>();
     }
+
 
     public int get(int key) {
         if (!map.containsKey(key)) {
