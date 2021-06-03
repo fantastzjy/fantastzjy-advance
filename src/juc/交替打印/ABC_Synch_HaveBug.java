@@ -1,16 +1,18 @@
 package juc.交替打印;
 
 //Synchronized同步法
-public class ABC_Synch {
+public class ABC_Synch_HaveBug {
     public static class ThreadPrinter implements Runnable {
         private String name;
         private Object prev;
         private Object self;
+
         private ThreadPrinter(String name, Object prev, Object self) {
             this.name = name;
             this.prev = prev;
             this.self = self;
         }
+
         @Override
         public void run() {
             int count = 10;

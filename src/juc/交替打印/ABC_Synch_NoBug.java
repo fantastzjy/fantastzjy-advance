@@ -1,7 +1,5 @@
 package juc.交替打印;
 
-
-
 public class ABC_Synch_NoBug {
     public static class ThreadPrinter implements Runnable {
         private String name;
