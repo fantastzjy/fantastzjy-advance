@@ -1,4 +1,4 @@
-package juc.交替打印;
+package juc.交替打印线程;
 
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
@@ -90,7 +90,6 @@ public class ABC_Condition {
         new ThreadA().start();
         new ThreadB().start();
         new ThreadC().start();
-
 
     }
 

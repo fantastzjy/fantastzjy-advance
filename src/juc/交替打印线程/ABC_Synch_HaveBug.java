@@ -1,4 +1,4 @@
-package juc.交替打印;
+package juc.交替打印线程;
 
 //Synchronized同步法
 public class ABC_Synch_HaveBug {

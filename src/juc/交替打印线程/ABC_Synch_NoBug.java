@@ -1,4 +1,4 @@
-package juc.交替打印;
+package juc.交替打印线程;
 
 public class ABC_Synch_NoBug {
     public static class ThreadPrinter implements Runnable {
