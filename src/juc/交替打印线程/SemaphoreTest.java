@@ -12,7 +12,7 @@ public class SemaphoreTest {
     private static Semaphore bbb = new Semaphore(0);
     private static Semaphore ccc = new Semaphore(0);
 
-
+    //错误示例
     //static class PA extends Thread {
     //
     //    @Override
@@ -52,7 +52,6 @@ public class SemaphoreTest {
     }
 
     static class PB extends Thread {
-
         @Override
         public void run() {
             for (int i = 0; i < 10; i++) {

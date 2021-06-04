@@ -5,6 +5,10 @@ import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * Lock锁方法
+ * 1、基本思路
+ * 通过ReentrantLock我们可以很方便的进行显式的锁操作，即获取锁和释放锁，
+ * 对于同一个对象锁而言，统一时刻只可能有一个线程拿到了这个锁，此时其他线程通过lock.lock()来获取对象锁时都会被阻塞，
+ * 直到这个线程通过lock.unlock()操作释放这个锁后，其他线程才能拿到这个锁。
  */
 public class ABC_Lock {
     //静态的，保证同一时刻只有一个锁   ReentrantLock默认为非公平锁   传入true才为公平锁

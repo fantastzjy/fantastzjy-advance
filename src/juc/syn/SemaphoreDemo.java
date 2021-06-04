@@ -13,12 +13,12 @@ public class SemaphoreDemo {
             new Thread(() -> {
                 try {
                     semaphore.acquire();  //不指定就是默认一个许可证  可运行的线程数量为  4/1=4
-                    semaphore.acquire(2);  //一次需要两个许可证   可运行的线程数量为  4/2=2
+                    //semaphore.acquire(2);  //一次需要两个许可证   可运行的线程数量为  4/2=2
 
                     System.out.println(Thread.currentThread().getName() + "\t 抢到了车位");
                     TimeUnit.SECONDS.sleep(new Random().nextInt(5));
-
                     System.out.println(Thread.currentThread().getName() + "\t------- 离开");
+
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 } finally {
