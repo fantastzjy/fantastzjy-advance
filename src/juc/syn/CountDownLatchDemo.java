@@ -3,7 +3,7 @@ package juc.syn;
 import java.util.Random;
 import java.util.concurrent.CountDownLatch;
 
-public class MyClass_CountDownLatch {
+public class CountDownLatchDemo {
 
 	public static void main(String[] args) throws InterruptedException {
 

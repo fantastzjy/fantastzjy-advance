@@ -8,6 +8,7 @@ import java.util.concurrent.locks.ReentrantLock;
  */
 public class ReentrantLockTest {
     private ReentrantLock lock = new ReentrantLock();
+
     public void testReentrantLock() {
         // 线程获得锁
         lock.lock();
@@ -34,9 +35,11 @@ public class ReentrantLockTest {
             System.out.println(Thread.currentThread().getName() + " release lock again");
         }
     }
+
     public static void main(String[] args) {
         final ReentrantLockTest test = new ReentrantLockTest();
         Thread thread = new Thread(new Runnable() {
+            @Override
             public void run() {
                 test.testReentrantLock();
             }
