@@ -9,16 +9,16 @@ public class T198_打家劫舍 {
             return nums[0];
         }
 
-        int[] memo=new int[nums.length];
+        int[] memo = new int[nums.length];
         memo[0] = nums[0];
         //memo[1] = nums[1];  从nums[1] 就要开始取和前面相比较的最大值了
         //memo[1] = Math.max(nums[1],nums[1]+memo[0]);
-        memo[1] = Math.max(nums[1],memo[0]);    //如果是nums[1]+memo[0] 就违反规则了
+        memo[1] = Math.max(nums[1], memo[0]);    //如果是nums[1]+memo[0] 就违反规则了
 
-        for (int i = 2; i <nums.length ; i++) {
-            memo[i]= Math.max(nums[i] + memo[i - 2], memo[i - 1]);
-
+        for (int i = 2; i < nums.length; i++) {
+            memo[i] = Math.max(nums[i] + memo[i - 2], memo[i - 1]);
         }
+
         return memo[nums.length - 1];
 
     }
@@ -31,7 +31,6 @@ public class T198_打家劫舍 {
     //链接：https://leetcode-cn.com/problems/house-robber/solution/da-jia-jie-she-by-leetcode-solution/
     //来源：力扣（LeetCode）
     //著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
-
 
 
 }

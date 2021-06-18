@@ -18,7 +18,6 @@ public class T25_K个一组翻转链表 {
             return head;
         }
 
-
         ListNode dummy = new ListNode(-1);
         dummy.next = head;
 

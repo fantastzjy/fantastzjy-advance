@@ -12,7 +12,6 @@ public class T70_爬楼梯 {
             max = first + second;
             first = second;
             second = max;
-
         }
 
         return max;

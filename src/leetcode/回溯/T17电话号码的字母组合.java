@@ -1,20 +1,13 @@
 package leetcode.回溯;
 
-import jvm.chapter05.src.com.atguigu.java3.StringBuilderTest;
 
 import java.util.*;
 
 public class T17电话号码的字母组合 {
-}
-
-
-class Solution {
-
     List<String> res = new LinkedList<>();
     Map<Character, String> phoneMap;
 
     public List<String> letterCombinations(String digits) {
-
         //List<String> track = new LinkedList<>();
         if (digits.length() == 0) {
             return res;
@@ -35,7 +28,6 @@ class Solution {
         //StringBuilder()添加一个 不用每次再new新的   也不用track
         backtrace(new StringBuilder(), chars, 0, 0);
         return res;
-
     }
 
     public void backtrace(StringBuilder track, char[] chars, int digitsStart, int letterIndex) {
@@ -43,7 +35,6 @@ class Solution {
             res.add(track.toString());
             return;
         }
-
 
         String s = phoneMap.get(chars[digitsStart]);
         char[] charArray = s.toCharArray();
@@ -53,11 +44,7 @@ class Solution {
             track.append(s.charAt(j));
             backtrace(track, chars, digitsStart + 1, letterIndex + 1);
             track.deleteCharAt(track.length() - 1);
-
-
         }
-
-
     }
 
     //复杂度分析

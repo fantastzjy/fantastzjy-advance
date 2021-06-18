@@ -1,7 +1,5 @@
 package leetcode;
 
-
-
 public class T100_相同的树 {
 
     public boolean isSameTree(TreeNode p, TreeNode q) {

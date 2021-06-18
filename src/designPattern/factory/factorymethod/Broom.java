@@ -1,6 +1,6 @@
-package designPattern.AAAmashibing.factory.factorymethod;
+package designPattern.factory.factorymethod;
 
-public class Broom implements Moveable{
+public class Broom implements Moveable {
     @Override
     public void go() {
         System.out.println("broom flying chuachuachua .....");

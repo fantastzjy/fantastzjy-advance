@@ -45,7 +45,7 @@ public class T55_跳跃游戏 {
     }
 
 
-    //bom方法 从后往前   没有了递归  时间是原来的  1/6
+    //bom方法 自底向上   没有了递归  时间是原来的  1/6
     public boolean canJump2(int[] nums) {
         int length = nums.length;
         //存储数组   指定长度之后不用初始化 默认为0
@@ -61,9 +61,7 @@ public class T55_跳跃游戏 {
                     memo[i] = 1;
                     break;
                 }
-
             }
-
         }
 
         //只看第一个是否为1  就是看是走到第一个并走通了
@@ -72,8 +70,6 @@ public class T55_跳跃游戏 {
         } else {
             return false;
         }
-
-
     }
 
 
@@ -81,11 +77,9 @@ public class T55_跳跃游戏 {
     public boolean canJump3(int[] nums) {
         int maxJump = nums.length - 1;
         for (int i = nums.length - 2; i >= 0; i--) {
-
             if (nums[i] + i >= maxJump) {
                 maxJump = i;
             }
-
         }
         //if (maxJump ==0 ) {
         //    return true;
@@ -95,6 +89,4 @@ public class T55_跳跃游戏 {
         //合并
         return maxJump == 0;
     }
-
-
 }

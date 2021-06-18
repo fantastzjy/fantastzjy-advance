@@ -1,11 +1,12 @@
 package designPattern.strategy;
 
 public class Sorter<T> {
+
     public void sort(T[] arr, Comparator<T> compartor) {
         for (int i = 0; i < arr.length; i++) {
             int min = i;
             for (int j = i + 1; j < arr.length; j++) {
-                if (compartor.compare(arr[i], arr[j]) == 1) {
+                if (compartor.compare(arr[min], arr[j]) == 1) {
                     min = j;
                 }
             }
@@ -18,5 +19,4 @@ public class Sorter<T> {
         arr[i] = arr[min];
         arr[min] = temp;
     }
-
 }

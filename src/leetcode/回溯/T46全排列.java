@@ -5,10 +5,12 @@ import java.util.List;
 
 public class T46全排列 {
 
-    List<List<Integer>> res = new ArrayList<>();  //有啥区别呢？？
+    List<List<Integer>> res = new ArrayList<>();
     //List<List<Integer>> res = new LinkedList<>();
 
-    /* 主函数，输入一组不重复的数字，返回它们的全排列 */
+    /*
+     * 主函数，输入一组不重复的数字，返回它们的全排列
+    */
     List<List<Integer>> permute(int[] nums) {
         // 记录「路径」
         ArrayList<Integer> track = new ArrayList<>();
@@ -31,6 +33,7 @@ public class T46全排列 {
             //res.add(new LinkedList<>(track));
             return;  //直接结束当前循环
         }
+
         for (int i = 0; i < nums.length; i++) {
 
             //要放在循环里面才能取到具体的那个值
@@ -47,9 +50,5 @@ public class T46全排列 {
             //track.remove(nums[i]);
             track.remove(track.size() - 1);//还是创建LinkedList比较方便，不用管索引
         }
-
-
     }
-
-
 }

@@ -6,7 +6,6 @@ public class T322_零钱兑换_自底向上迭代法 {
 
 
     public int coinChange(int[] coins, int amount) {
-
         if (amount < 0) {
             return -1;
         }
@@ -31,7 +30,6 @@ public class T322_零钱兑换_自底向上迭代法 {
             }
             //dp[i] = (min != dp[i]) ? min : dp[i];
         }
-
 
         return (dp[amount] != amount + 1) ? dp[amount] : -1;
     }

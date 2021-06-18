@@ -5,7 +5,6 @@ public class T62_不同路径 {
     //注意 ：机器人每次只能向下或者向右移动一步。
     //动态规划  用二维数组记忆化小技巧   将第一行第一列先计算出来手动填充上
 
-
     //这道题最重要的一点就是  应该如何去计算到达其中的某个盒子路径的方法
     // 就是上面格子的路径加上左面的路径
     public int uniquePaths(int m, int n) {
@@ -20,12 +19,11 @@ public class T62_不同路径 {
         for (int i = 1; i < m; i++) {
             for (int j = 1; j < n; j++) {
                 ints[i][j] = ints[i - 1][j] + ints[i][j - 1];
-
             }
         }
 
         //里面不是mn 不要越界啦
-        return  ints[m-1][n-1] ;
+        return ints[m - 1][n - 1];
     }
     //时间复杂度：O(mn)O(mn)。
     //

@@ -15,6 +15,7 @@ public class T322_零钱兑换_自顶向下递归法 {
         if (amount < 0) {
             return -1;
         }
+        //0的话就不用凑了 下面循环里一减就是负数
         if (amount == 0) {
             return 0;
         }
@@ -34,6 +35,7 @@ public class T322_零钱兑换_自顶向下递归法 {
         return count(coins, amount);
     }
 
+
     private int count(int[] coins, int amount) {
 
         //定义base
@@ -47,19 +49,20 @@ public class T322_零钱兑换_自顶向下递归法 {
         if (dp[amount] != -666) {
             return dp[amount];
         }
+
         int res = Integer.MAX_VALUE;
 
         for (int i = 0; i < coins.length; i++) {
             //计算子问题的结果
             int subProblem = count(coins, amount - coins[i]);
-            //子问题无解则跳过
+            //子问题无解则跳过  表示这个amount - coins[i]  越界base返回的-1
             if (subProblem == -1) {
                 continue;
             }
-            //在子问题中选择最优解 然后加1   这里的 1 是、、、那啥
+            //在子问题中选择最优解 然后加1   这里的 1 是表示amount - coins[i] 这个 ‘硬币’
+            //rs和每一轮的值都会比较一下
             res = Math.min(res, 1 + subProblem);
         }
-
 
         //if (res == -1) {
         //    return -1;

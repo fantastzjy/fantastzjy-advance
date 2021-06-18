@@ -8,11 +8,9 @@ public class T51N皇后 {
     List<List<String>> res = new ArrayList<>();
     int n;
 
-
     public static void main(String[] args) {
         List<List<String>> lists = new T51N皇后().solveNQueens(4);
         System.out.println(lists.get(0));
-
     }
 
 
@@ -36,10 +34,7 @@ public class T51N皇后 {
                 sb.append(board[i]);
                 strings.add(sb.toString());
             }
-
             res.add(new ArrayList<>(strings));
-
-
             return;
         }
 
@@ -50,10 +45,7 @@ public class T51N皇后 {
             board[row][col] = 'Q';
             backtrack(board, row + 1);
             board[row][col] = '.';
-
         }
-
-
     }
 
 
