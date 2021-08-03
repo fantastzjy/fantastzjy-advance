@@ -5,7 +5,7 @@ import java.util.LinkedList;
 
 public class T752打开转盘锁 {
     public static void main(String[] args) {
-        System.out.println();
+
     }
 
     public int openLock(String[] deadends, String target) {

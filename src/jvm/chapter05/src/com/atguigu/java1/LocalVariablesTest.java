@@ -22,7 +22,7 @@ public class LocalVariablesTest {
         int count = 10;
         System.out.println(count);
         //因为this变量不存在于当前方法的局部变量表中！！
-//        System.out.println(this.count);
+        //System.out.println(this.count);
     }
 
     //关于Slot的使用的理解

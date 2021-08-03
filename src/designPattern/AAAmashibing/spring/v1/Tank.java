@@ -1,14 +1,8 @@
 package designPattern.AAAmashibing.spring.v1;
 
-
-
 import java.util.Random;
 
-/**
- *
- */
 public class Tank {
-
     /**
      * 模拟坦克移动了一段儿时间
      */

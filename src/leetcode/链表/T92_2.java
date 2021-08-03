@@ -37,6 +37,7 @@ public class T92_2 {
             head = pre;
         }
 
+
         curr2.next = curr;
 
         return head;
