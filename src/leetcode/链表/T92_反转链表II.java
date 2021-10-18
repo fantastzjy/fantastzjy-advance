@@ -37,14 +37,7 @@ public class T92_反转链表II {
             curr = next;
         }
 
-        //pre2.next = pre;
-        //if (curr != null) {
-        //    curr2.next = curr;
-        //}
 
-        //if (left==1) {
-        //    return pre;
-        //}
 
         //如果pre2 不是null 就正常连接   如果是null  head节点自然就是 pre
         if (pre2 != null) {
@@ -53,7 +46,6 @@ public class T92_反转链表II {
             head = pre;
         }
         curr2.next = curr;
-
         return head;
     }
 

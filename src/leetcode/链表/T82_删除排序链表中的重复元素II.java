@@ -13,7 +13,7 @@ public class T82_删除排序链表中的重复元素II {
             ListNode cur = dummy;
             while (cur.next != null && cur.next.next != null) {
                 if (cur.next.val == cur.next.next.val) {
-                    //用x标记的好处就是 生了一个指针pre 可以直接用下面的判断删掉
+                    //用x标记  只要相等就全删了  顺便直接把第一个节点也删除了
                     int x = cur.next.val;
                     while (cur.next != null && cur.next.val == x) {
                         //如果相等 就等于下一个   当下一个进不来该循环 cur就正好是不相等的那一个

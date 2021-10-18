@@ -8,28 +8,25 @@ public class T141_环形链表 {
 
     //方法二：快慢指针
     public boolean hasCycle(ListNode head) {
+        //这里要先进行判断 传进来的head是否为null    忘记判断了
+        //if (head != null) {   判断的条件判断两个更好 至少三个才能形成环
+        if (head == null || head.next == null) {
+            return false;
+        }
 
         ListNode slow = head;
         ListNode fast = head;
 
-        //这里要先进行判断 传进来的head是否为null    忘记判断了
-        //if (head != null) {   判断的条件判断两个更好 至少三个才能形成环
-        if (head == null || head.next == null) {
-
-            //边界问题如何确定？？看谁走的快 神谁在边上;
-            while (fast.next != null && fast.next.next != null) {
-                slow = slow.next;
-                fast = fast.next.next;
-                //这里要直接进行节点的比较 不是val值得比较    这里如果   slow == fast   直接比较的是地址？？？？？
-                //if (slow.val == fast.val) {
-                if (slow == fast) {
-                    return true;
-                }
-
+        //边界问题如何确定？？看谁走的快 神谁在边上;
+        while (fast.next != null && fast.next.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+            //这里要直接进行节点的比较 不是val值得比较    这里如果   slow == fast   比较的才是 是不是相同节点
+            //if (slow.val == fast.val) {
+            if (slow == fast) {
+                return true;
             }
-
         }
-
         return false;
     }
 

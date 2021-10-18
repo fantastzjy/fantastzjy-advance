@@ -27,13 +27,12 @@ public class Offer06_从尾到头打印链表 {
         for (int i = 0; i < size; i++) {
             //result[i] = integers[i].intValue();
             result[i] = integers.get(i);
-
         }
         return result;
     }
     //递归结束
 
-    //栈
+    //法二：栈
     public int[] reversePrint1(ListNode head) {
 
         if (head == null) {
@@ -67,15 +66,13 @@ public class Offer06_从尾到头打印链表 {
         return ints;
     }
 
-    //时间复杂度：O(n)O(n)。正向遍历一遍链表，然后从栈弹出全部节点，等于又反向遍历一遍链表。
-    //空间复杂度：O(n)O(n)。额外使用一个栈存储链表中的每个节点。
-    //
+    //时间复杂度：O(n)。正向遍历一遍链表，然后从栈弹出全部节点，等于又反向遍历一遍链表。
+    //空间复杂度：O(n)。额外使用一个栈存储链表中的每个节点。
     //作者：LeetCode-Solution
     //链接：https://leetcode-cn.com/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof/solution/mian-shi-ti-06-cong-wei-dao-tou-da-yin-lian-biao-b/
-    //来源：力扣（LeetCode）
-    //著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 
 
+    //法三：
     //java无需借助Stack和ArrayList双100解法
 
     public int[] reversePrint2(ListNode head) {

@@ -19,8 +19,6 @@ public class T53_最大子序和 {
             nums[i] = Math.max(nums[i], nums[i] + nums[i - 1]);
             max = nums[i] > max ? nums[i] : max;
         }
-
         return max;
     }
-
 }

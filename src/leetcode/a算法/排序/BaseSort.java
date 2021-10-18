@@ -25,7 +25,6 @@ public class BaseSort {
         int[] result = new int[arr.length];
         int[] count = new int[10];
 
-
         for (int i = 0; i < maxLen; i++) {
             int division = (int) Math.pow(10, i);
             for (int j = 0; j < arr.length; j++) {
@@ -44,7 +43,9 @@ public class BaseSort {
             }
 
             System.arraycopy(result, 0, arr, 0, arr.length);
-            Arrays.fill(count, 0);   //一定要将 count 在初始化为0
+            //一定要将 count 在初始化为0   !!!!!!!!!!!!!!!!!!!
+            //不重置的话会直接导致上面的for循环中由于count[num]过大，导致res数组越界
+            Arrays.fill(count, 0);
         }
     }
 }

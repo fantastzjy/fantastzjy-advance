@@ -10,6 +10,7 @@ package designPattern.Singleton;
 public class Singleton_懒汉式 {
     //如果不加 volatile  会在没有初始化就返回instance
     // 通过volatile保证线程可见性和有序性。
+
     private static volatile Singleton_懒汉式 INSTANCE;
 
     public static Singleton_懒汉式 getInstance() {

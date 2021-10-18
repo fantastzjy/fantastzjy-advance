@@ -25,12 +25,9 @@ public class T62_不同路径 {
         //里面不是mn 不要越界啦
         return ints[m - 1][n - 1];
     }
-    //时间复杂度：O(mn)O(mn)。
-    //
-    //空间复杂度：O(mn)O(mn)，即为存储所有状态需要的空间。注意到 f(i, j)f(i,j) 仅与第 ii 行和第 i-1i−1 行的状态有关，因此我们可以使用滚动数组代替代码中的二维数组，使空间复杂度降低为 O(n)O(n)。此外，由于我们交换行列的值并不会对答案产生影响，因此我们总可以通过交换 mm 和 nn 使得 m \leq nm≤n，这样空间复杂度降低至 O(\min(m, n))O(min(m,n))。
-    //
+    //时间复杂度：O(mn)
+    //空间复杂度：O(mn)，即为存储所有状态需要的空间。注意到 f(i, j)f(i,j) 仅与第 ii 行和第 i-1i−1 行的状态有关，因此我们可以使用滚动数组代替代码中的二维数组，使空间复杂度降低为 O(n)O(n)。此外，由于我们交换行列的值并不会对答案产生影响，因此我们总可以通过交换 mm 和 nn 使得 m \leq nm≤n，这样空间复杂度降低至 O(\min(m, n))O(min(m,n))。
     //作者：LeetCode-Solution
     //链接：https://leetcode-cn.com/problems/unique-paths/solution/bu-tong-lu-jing-by-leetcode-solution-hzjf/
-    //来源：力扣（LeetCode）
-    //著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
 }

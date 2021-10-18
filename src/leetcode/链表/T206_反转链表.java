@@ -23,6 +23,27 @@ public class T206_反转链表 {
         return pre;
     }
 
+    public ListNode reverseList2(ListNode head) {
+        if (head == null || head.next == null) {
+            return head;
+        }
+        ListNode pre = null;
+        ListNode curr = head;
+        ListNode next = head;
+
+        //while (curr.next!=null) {
+        while (curr != null) {
+            next = curr.next;
+            curr.next = pre;
+            pre = curr;
+            curr = next;
+        }
+
+
+        //return curr;
+        return pre;
+    }
+
 }
 
 

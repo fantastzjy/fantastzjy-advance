@@ -9,7 +9,6 @@ public class T21_合并两个有序链表 {
         //如果是判断next 是否为null 就会导致当前节点无法进行 比较插入
         //while (l1.next != null && l2.next != null) {
         while (l1 != null && l2 != null) {
-
             if (l1.val < l2.val) {
                 newList.next = l1;
                 l1 = l1.next;
@@ -19,10 +18,8 @@ public class T21_合并两个有序链表 {
                 l2 = l2.next;
                 //newList = newList.next;   移到下面
             }
-
             newList = newList.next;
         }
-
         if (l1 == null) {
             newList.next = l2;
         }
@@ -30,8 +27,6 @@ public class T21_合并两个有序链表 {
         if (l2 == null) {
             newList.next = l1;
         }
-
-
         return prehead.next;
     }
 
@@ -48,8 +43,6 @@ public class T21_合并两个有序链表 {
     //著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 
 
-
-
     //方法2 递归解法
     public ListNode mergeTwoLists2(ListNode l1, ListNode l2) {
         if (l1 == null) {
@@ -63,7 +56,6 @@ public class T21_合并两个有序链表 {
             l2.next = mergeTwoLists(l1, l2.next);
             return l2;
         }
-
     }
 
     //递归解法先进行 其中有一个是否为null的判断  然后、、、  不断地调用自身的函数 进行递归

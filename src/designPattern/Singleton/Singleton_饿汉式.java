@@ -7,7 +7,7 @@ package designPattern.Singleton;
  * （话说你不用的，你装载它干啥>
  */
 public class Singleton_饿汉式 {
-    private static final Singleton_饿汉式 INSTANCE = new Singleton_饿汉式();
+    private static Singleton_饿汉式 INSTANCE = new Singleton_饿汉式();
 
     private Singleton_饿汉式() {
     }

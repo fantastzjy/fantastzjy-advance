@@ -104,7 +104,7 @@ public class Test {
 
         //反转数组 没有返回值，直接参数地址上的值进行反转操作
         ArrayList<String> list1 = new ArrayList<>();
-        list1.add("qqq");
+        list1.add("笔试");
         list1.add("www");
         list1.add("rrr");
         System.out.println("反转数组前" + list1.toString());

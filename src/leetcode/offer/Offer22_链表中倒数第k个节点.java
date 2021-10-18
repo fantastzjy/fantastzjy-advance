@@ -13,15 +13,14 @@ public class Offer22_链表中倒数第k个节点 {
         ListNode fast = head;
         ListNode slow = head;
         for (int i = 0; i < k&&fast.next!=null; i++) {
-
             fast = fast.next;
         }
 
         while (fast.next != null) {
             fast = fast.next;
             slow = slow.next;
-
         }
+
         return slow.next;
     }
 }

@@ -23,6 +23,7 @@ public class CountDownLatchDemo {
 				}
 				System.out.println("同学小" + Thread.currentThread().getName() + "离开了教室");
 				countDownLatch.countDown();
+                System.out.println("同学小" + Thread.currentThread().getName() + "继续");
 			}, i + "").start();
 		}
 

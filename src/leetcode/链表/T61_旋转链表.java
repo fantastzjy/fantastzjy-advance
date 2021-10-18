@@ -40,46 +40,4 @@ public class T61_旋转链表 {
     //題解來自
     //https://leetcode-cn.com/problems/rotate-list/solution/xuan-zhuan-lian-biao-by-leetcode-solutio-woq1/
 
-
-    //我的解法没解出来
-    //public ListNode rotateRight(ListNode head, int k) {
-    //    ListNode fast = head;
-    //    ListNode slow = head;
-    //
-    //    Queue<ListNode> queue = new LinkedList<>();
-    //    for (int i = 0; i < k; i++) {
-    //        if (fast.next != null) {
-    //            fast = fast.next;
-    //        } else {
-    //            fast.next = head;
-    //        }
-    //    }
-    //
-    //    while (fast.next != null) {
-    //        fast = fast.next;
-    //        slow = slow.next;
-    //    }
-    //
-    //    queue.offer(slow.next);
-    //    ListNode d = slow;
-    //    slow = slow.next;
-    //    d.next = null;
-    //
-    //
-    //    while (slow != null) {
-    //        queue.offer(slow);
-    //        slow = slow.next;
-    //    }
-    //
-    //    ListNode newlist = queue.poll();
-    //    ListNode dummy = newlist;
-    //
-    //    while (!queue.isEmpty()) {
-    //        newlist.next = queue.poll();
-    //        newlist = newlist.next;
-    //    }
-    //    newlist.next = head;
-    //    return dummy;
-    //}
-
 }

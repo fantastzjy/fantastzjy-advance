@@ -8,7 +8,7 @@ public class T111二叉树的最小深度 {
         if (root == null) {
             return 0;
         }
-        int depth=1;
+        int depth = 1;//别忘了根节点也代表一层
         LinkedList<TreeNode> queue = new LinkedList<>();
         queue.offer(root);
         while (!queue.isEmpty()) {

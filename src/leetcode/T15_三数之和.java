@@ -4,33 +4,35 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+
 public class T15_三数之和 {
 
     /**
-     *排序+双指针
+     * 排序+双指针
      * 两层for循环嵌套一个判断
-     *
+     * 时间复杂度 n^2   !!!!!!!!!!  内层for循环和while合并才能遍历一遍
      */
     public List<List<Integer>> threeSum(int[] nums) {
-        int n = nums.length;
-        Arrays.sort(nums);
+        int len = nums.length;
+        Arrays.sort(nums);  //!!!!!!!!!!!
         List<List<Integer>> ans = new ArrayList<List<Integer>>();
 
+
         // 枚举 a
-        for (int first = 0; first < n; ++first) {
-            // 需要和上一次枚举的数不相同！！！
+        for (int first = 0; first < len; ++first) {
+            // 需要和上一次枚举的数不相同！！！   第一个元素没有上一个
             if (first > 0 && nums[first] == nums[first - 1]) {
                 continue;
             }
             // c 对应的指针初始指向数组的最右端
-            int third = n - 1;
+            int third = len - 1;
 
             //目标值
             int target = -nums[first];
             // 枚举 b
-            for (int second = first + 1; second < n; ++second) {
+            for (int second = first + 1; second < len; ++second) {
 
-                // 需要和上一次枚举的数不相同！！！  second > first + 1  为了让第二层循环的第一个元素不进行查重
+                // 需要和上一次枚举的数不相同！！！  且 第二层的第一个元素没有上一个
                 if (second > first + 1 && nums[second] == nums[second - 1]) {
                     continue;
                 }
@@ -40,8 +42,8 @@ public class T15_三数之和 {
                     --third;
                 }
 
-                // 如果指针重合，随着 b 后续的增加
-                // 就不会有满足 a+b+c=0 并且 b<c 的 c 了，可以退出第二层循环！！！！！
+                //上面有两种情况退出while 当 third不大于second时退出的话 third和second指向同一个
+                // second再往后就不会再有满足条件的  可以退出第二层循环！！！！！
                 if (second == third) {
                     break;
                 }
@@ -59,6 +61,5 @@ public class T15_三数之和 {
         return ans;
     }
 
-    //法二  类似 两数之和
 
 }

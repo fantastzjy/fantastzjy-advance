@@ -4,7 +4,6 @@ import java.util.Arrays;
 
 public class T322_零钱兑换_自底向上迭代法 {
 
-
     public int coinChange(int[] coins, int amount) {
         if (amount < 0) {
             return -1;
@@ -13,6 +12,7 @@ public class T322_零钱兑换_自底向上迭代法 {
             return 0;
         }
 
+        //只有硬币的数量是个变量所以是一维数组
         int[] dp = new int[amount + 1];
         //初始化数组   初始值不能是最大值 +1 后会越界  -2147483648
         Arrays.fill(dp, amount + 1);
@@ -30,7 +30,7 @@ public class T322_零钱兑换_自底向上迭代法 {
             }
             //dp[i] = (min != dp[i]) ? min : dp[i];
         }
-
+        //return dp[amount+1];
         return (dp[amount] != amount + 1) ? dp[amount] : -1;
     }
 

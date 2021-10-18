@@ -18,7 +18,6 @@ public class T142_2 {
             }
         }
 
-
         if (!isCir) {
             return null;
         }

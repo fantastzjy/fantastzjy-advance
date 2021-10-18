@@ -7,6 +7,7 @@ public class T435_无重叠区间 {
 
     public int eraseOverlapIntervals(int[][] intervals) {
 
+        //将数组结尾按照升序排序
         Arrays.sort(intervals, new Comparator<int[]>() {
             @Override
             public int compare(int[] o1, int[] o2) {
