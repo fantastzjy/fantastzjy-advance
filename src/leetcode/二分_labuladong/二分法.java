@@ -15,8 +15,7 @@ public class 二分法 {
             int mid = l + (r - l) / 2;
             if (nums[mid] == target) {
                 return mid;
-            }
-            if (target < nums[mid]) {
+            } else if (target < nums[mid]) {
                 r = mid - 1;
 
             } else {

@@ -11,9 +11,11 @@ public class T198_打家劫舍 {
 
         int[] memo = new int[nums.length];
         memo[0] = nums[0];
-        //memo[1] = nums[1];  从nums[1] 就要开始取和前面相比较的最大值了
-        //memo[1] = Math.max(nums[1],nums[1]+memo[0]);
-        memo[1] = Math.max(nums[1], memo[0]);    //如果是nums[1]+memo[0] 就违反规则了
+        //从nums[1] 就要开始取和前面相比较的最大值了   由于他没法加前前一个，所以就是自己本身和前一个比较！！
+        //这里相当于   memo[1] = Math.max(nums[1]+memo[1 - 2], memo[1-1]);    memo[1 - 2]越界了不写
+        //memo[1] = nums[1];   错
+        //memo[1] = Math.max(nums[1],nums[1]+memo[0]); 错
+        memo[1] = Math.max(nums[1], memo[0]);    //！！！！！
 
         for (int i = 2; i < nums.length; i++) {
             //就是把和前一个相加和当前比较换成 和 前前一个相加和当前比较  每一个都是记录的当前的最大值

@@ -33,11 +33,7 @@ public class T695_岛屿的最大面积 {
 
 
     //时间复杂度：O(R \times C)O(R×C)。其中 RR 是给定网格中的行数，C 是列数。我们访问每个网格最多一次。
-    //
     //空间复杂度：O(R \times C)O(R×C)，递归的深度最大可能是整个网格的大小，因此最大可能使用 O(R \times C)O(R×C) 的栈空间。
     //
-    //作者：LeetCode-Solution
     //链接：https://leetcode-cn.com/problems/max-area-of-island/solution/dao-yu-de-zui-da-mian-ji-by-leetcode-solution/
-    //来源：力扣（LeetCode）
-    //著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 }

@@ -8,7 +8,7 @@ public class T53_最大子序和 {
     public int maxSubArray(int[] nums) {
 
         //int[] dp = new int[nums.length];
-        //dp[0] = nums[0];   不用记忆化数组就行 直接原数组操作
+        //dp[0] = nums[0];   不用记忆化数组就行 直接原数组操作！！！
 
         //最大值的赋值 先设为数组的第一个数  不能自己瞎设
         int max = nums[0];

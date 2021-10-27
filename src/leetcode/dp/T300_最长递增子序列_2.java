@@ -16,7 +16,7 @@ public class T300_最长递增子序列_2 {
             dp[i] = 1;
             for (int j = 0; j < i; j++) {
                 if (nums[i] > nums[j]) {
-                    dp[i] = Math.max(dp[i], dp[j] + 1);
+                    dp[i] = Math.max(dp[i], dp[j] + 1);   //并不是找到第一个大于的 就停止  前面可能还有更大的连续的  只是第一个不大于他
                     //把这个放在内循环的额外面比较比较好
                     //if (max < dp[i]) {
                     //    max = dp[i];

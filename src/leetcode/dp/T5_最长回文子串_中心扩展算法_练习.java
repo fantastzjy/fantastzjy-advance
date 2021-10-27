@@ -2,7 +2,7 @@ package leetcode.dp;
 
 //时间 O(n^2)
 //空间 O(1)
-public class T5_最长回文子串_中心扩展算法_2 {
+public class T5_最长回文子串_中心扩展算法_练习 {
 
     //证明  substring左闭右开
     public static void main(String[] args) {

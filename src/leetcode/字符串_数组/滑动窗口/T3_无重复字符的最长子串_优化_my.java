@@ -15,7 +15,7 @@ public class T3_无重复字符的最长子串_优化_my {
             } else {
                 left = Math.max(left, map.get(s.charAt(i)) + 1);
                 //这里其实还有漏洞 但是补上了  i没有++ 在下一轮循环有将这里删除的key添加进来
-                // 还是优化版本号直接利用放进去就更新的特性
+                // 还是优化版本好直接利用放进去就更新的特性
                 map.remove(s.charAt(i));
                 continue;
             }
