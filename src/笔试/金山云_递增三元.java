@@ -13,17 +13,20 @@ import java.util.Scanner;
 //        14
 
 public class 金山云_递增三元 {
+//8
+//
+//        2 1 3 4 5 6 8 7
+//        4
+public static void main(String[] args) {
 
-    public static void main(String[] args) {
-
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int[] ints = new int[n];
-        for (int i = 0; i < n; i++) {
-            ints[i] = sc.nextInt();
-        }
-        System.out.println(fin(ints));
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt();
+    int[] ints = new int[n];
+    for (int i = 0; i < n; i++) {
+        ints[i] = sc.nextInt();
     }
+    System.out.println(fin(ints));
+}
 
     public static int fin(int[] arr) {
         int len = arr.length;

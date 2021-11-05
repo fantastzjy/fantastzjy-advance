@@ -49,5 +49,3 @@ public class T54_螺旋矩阵 {
         return res;
     }
 }
-
-//链接：https://leetcode-cn.com/problems/spiral-matrix/solution/luo-xuan-ju-zhen-by-leetcode-solution/

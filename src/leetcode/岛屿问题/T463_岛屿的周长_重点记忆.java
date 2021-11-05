@@ -1,6 +1,6 @@
 package leetcode.岛屿问题;
 
-public class T463_岛屿的周长 {
+public class T463_岛屿的周长_重点记忆 {
     //还有更好解法 迭代处理
 
     //深度优先搜索
@@ -16,17 +16,19 @@ public class T463_岛屿的周长 {
                     fin = true;
                     break;
                 }
-                if (fin) {
-                    break;
-                }
+            }
+
+            if (fin) {
+                break;
             }
         }
 
         return cir;
     }
 
+    //如果走过的不标记为2 而是直接标记为0 那就乱套了    因为标记边界是两个条件  达到grid的边界、遇到0
     private int dfs(int[][] grid, int i, int j) {
-
+        //basecase
 
         //1、超过数组界 边界加1
         if (i < 0 || j < 0 || i >= grid.length || j >= grid[0].length) {
@@ -40,6 +42,9 @@ public class T463_岛屿的周长 {
         if (grid[i][j] == 2) {
             return 0;
         }
+
+        //处理
+        //4、没走过
 
         //标记为走过了
         grid[i][j] = 2;
