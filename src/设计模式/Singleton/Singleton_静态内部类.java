@@ -9,8 +9,6 @@ package 设计模式.Singleton;
  * 赋值的话，是可以任意赋值的
  */
 public class Singleton_静态内部类 {
-    private Singleton_静态内部类() {
-    }
 
     private static class Singleton_neibuleiHolder {
         private static Singleton_静态内部类 INSTANCE = new Singleton_静态内部类();
@@ -20,8 +18,6 @@ public class Singleton_静态内部类 {
         return Singleton_neibuleiHolder.INSTANCE;
     }
 
-    public void m() {
-    }
 
     public static void main(String[] args) {
         for (int i = 0; i < 100; i++) {

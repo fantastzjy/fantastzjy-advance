@@ -9,16 +9,10 @@ package 设计模式.Singleton;
 public class Singleton_饿汉式 {
     private static Singleton_饿汉式 INSTANCE = new Singleton_饿汉式();
 
-    private Singleton_饿汉式() {
-    }
-
     public static Singleton_饿汉式 getInstance() {
         return INSTANCE;
     }
 
-    public void m() {
-        System.out.println("m");
-    }
 
     public static void main(String[] args) {
         Singleton_饿汉式 q1 = Singleton_饿汉式.getInstance();
