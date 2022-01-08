@@ -45,6 +45,27 @@ public class T206_反转链表 {
         return pre;
     }
 
+
+    //反例
+    //只会返回最后末尾的数  因为curr的指针没有指向前面  且会造成死循环 最后的头结点与第二个节点循环
+    public  ListNode reverseList错( ListNode head) {
+        if (head == null || head.next == null) {
+            return head;
+
+        }
+         ListNode pre = head;
+         ListNode curr = head.next;
+         ListNode next = null;
+        while (curr.next != null) {
+            next = curr.next;
+            curr.next = pre;
+            pre = curr;
+            curr = next;
+        }
+
+        return curr;
+    }
+
 }
 
 
