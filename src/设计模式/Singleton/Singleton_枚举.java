@@ -7,9 +7,6 @@ package 设计模式.Singleton;
 public enum Singleton_枚举 {
     INSTANCE;
 
-    public void m() {
-    }
-
     public static void main(String[] args) {
         for (int i = 0; i < 100; i++) {
             new Thread(() -> {

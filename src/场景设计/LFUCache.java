@@ -43,7 +43,7 @@ public class LFUCache {
     public LFUCache(int capacity) {
         keyToValue = new HashMap<>();
         keyToFreq = new HashMap<>();
-        freqToKey = new HashMap<>();  //注意这里还是new hashmap
+        freqToKey = new HashMap<>();  //注意这里还是new java原理相关.hashmap
         this.capacity = capacity;
         this.minFreq = 0;
     }

@@ -3,11 +3,12 @@ package leetcode.a算法.排序;
 public class MergeSort_练习 {
 
     public static void main(String[] args) {
-        int[] arr = {2, 4, 6, 8, 1, 3, 5, 7, 9}; //9
+        //int[] arr = {2, 4, 6, 8, 1, 3, 5, 7, 9}; //9
+        int[] arr = {2, 5, 3, 1, 4}; //9
         mergeSort(arr, 0, arr.length - 1);
-        for (int i : arr) {
-            System.out.print(i + " ");
-        }
+        //for (int i : arr) {
+        //    System.out.print(i + " ");
+        //}
     }
 
     //左、右、合并
@@ -20,6 +21,7 @@ public class MergeSort_练习 {
         mergeSort(arr, left, mid);
         mergeSort(arr, mid + 1, right);
         merge(arr, left, mid, right);
+        print(arr);
     }
 
     private static void merge(int[] arr, int L, int mid, int R) {
@@ -42,7 +44,7 @@ public class MergeSort_练习 {
         for (int j = 0; j < temps.length; j++) {
             arr[L + j] = temps[j];
         }
-        print(arr);
+        //print(arr);
     }
 
     public static void print(int[] nums) {
