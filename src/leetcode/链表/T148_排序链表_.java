@@ -1,22 +1,43 @@
 package leetcode.链表;
 
-public class T148_排序链表 {
+public class T148_排序链表_ {
+
+    public static void main(String[] args) {
+        ListNode head1 = new ListNode(4);
+        ListNode head2 = new ListNode(2);
+        ListNode head3 = new ListNode(1);
+        ListNode head4 = new ListNode(3);
+        head1.next = head2;
+        head2.next = head3;
+        head3.next = head4;
+
+
+        sortList(head1);
+        System.out.println();
+
+     }
+
 
     //思路   链表版本的归并排序
 
-    public ListNode sortList(ListNode head) {
+    public static ListNode sortList(ListNode head) {
         return sortList(head, null);
     }
 
-    public ListNode sortList(ListNode head, ListNode tail) {
-        if (head == null) {
-            return head;
-        }
-        if (head.next == tail) {
-            head.next = null;
+    public static ListNode sortList(ListNode head, ListNode tail) {
+        //tail为null则下面咩有必要再去排序
+        //有0或1个元素
+        if (head == null  || head == tail) {
             return head;
         }
 
+        //只有两个元素
+        if (head.next == tail) {
+            ListNode sorted = merge(head, tail);
+            return sorted;
+        }
+
+        //至少三个元素
         ListNode slow = head, fast = head;
         while (fast != tail) {
             slow = slow.next;
@@ -25,14 +46,15 @@ public class T148_排序链表 {
                 fast = fast.next;
             }
         }
-        ListNode mid = slow;
-        ListNode list1 = sortList(head, mid);
-        ListNode list2 = sortList(mid, tail);
+
+
+        ListNode list1 = sortList(head, slow);
+        ListNode list2 = sortList(slow.next, tail);
         ListNode sorted = merge(list1, list2);
         return sorted;
     }
 
-    public ListNode merge(ListNode head1, ListNode head2) {
+    public static ListNode merge(ListNode head1, ListNode head2) {
         ListNode dummyHead = new ListNode(0);
         ListNode temp = dummyHead, temp1 = head1, temp2 = head2;
         while (temp1 != null && temp2 != null) {
@@ -50,6 +72,7 @@ public class T148_排序链表 {
         } else if (temp2 != null) {
             temp.next = temp2;
         }
+
         return dummyHead.next;
     }
 }
