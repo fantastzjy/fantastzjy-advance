@@ -3,34 +3,34 @@ package leetcode.链表;
 public class T82_删除排序链表中的重复元素II {
     //官网方法一：一次遍历
 
-        public ListNode deleteDuplicates2(ListNode head) {
-            if (head == null) {
-                return head;
-            }
-
-            ListNode dummy = new ListNode(0, head);
-
-            ListNode cur = dummy;
-            while (cur.next != null && cur.next.next != null) {
-                if (cur.next.val == cur.next.next.val) {
-                    //用x标记  只要相等就全删了  顺便直接把第一个节点也删除了
-                    int x = cur.next.val;
-                    while (cur.next != null && cur.next.val == x) {
-                        //如果相等 就等于下一个   当下一个进不来该循环 cur就正好是不相等的那一个
-                        //当相等时 curr的next一直在被替代
-                        //当不相等后 curr也正好变成了 不相等的那个 跳出本while 重复的也被删完了
-                        cur.next = cur.next.next;
-                    }
-                } else {
-                    cur = cur.next;
-                }
-
-                //如果相等 会停留在相等的最后一个 如果不相等 会停留在当前 然后 cur = cur.next;
-                //直接将下一个赋值给当前就是往前走  如果将下下个赋值给当前就是删除中间的那个
-            }
-
-            return dummy.next;
+    public ListNode deleteDuplicates2(ListNode head) {
+        if (head == null) {
+            return head;
         }
+
+        ListNode dummy = new ListNode(0, head);
+
+        ListNode cur = dummy;
+        while (cur.next != null && cur.next.next != null) {
+            if (cur.next.val == cur.next.next.val) {
+                //用x标记  只要相等就全删了  顺便直接把第一个节点也删除了
+                int x = cur.next.val;
+                while (cur.next != null && cur.next.val == x) {
+                    //如果相等 就等于下一个   当下一个进不来该循环 cur就正好是不相等的那一个
+                    //当相等时 curr的next一直在被替代
+                    //当不相等后 curr也正好变成了 不相等的那个 跳出本while 重复的也被删完了
+                    cur.next = cur.next.next;
+                }
+            } else {
+                cur = cur.next;
+            }
+
+            //如果相等 会停留在相等的最后一个 如果不相等 会停留在当前 然后 cur = cur.next;
+            //直接将下一个赋值给当前就是往前走  如果将下下个赋值给当前就是删除中间的那个
+        }
+
+        return dummy.next;
+    }
 
 
     //作者：LeetCode-Solution
