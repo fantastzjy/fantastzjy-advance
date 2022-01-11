@@ -24,18 +24,22 @@ public class T113_剑指Offer34_二叉树中和为某一值的路径 {
             path.offerLast(root.val);
             target -= root.val;
 
-            //1、前序遍历
-            //题目要求是到叶子节点
+            //1、前序遍历  （basecase）
+            //题目要求是到叶子节点！！！！！！！
             if (root.left == null && root.right == null && target == 0) {
-                ret.add(new LinkedList<Integer>(path));  //创建新集合都可以把自身类型的集合当做参数传进来 集合中的元素都添加进来
+                //创建新集合都可以把自身类型的集合当做参数传进来 集合中的元素都添加进来
+                ret.add(new LinkedList<Integer>(path));
             }
+
+
             //2、遍历左子树
             dfs(root.left, target);
             //3、遍历右子树
             dfs(root.right, target);
 
-            //4、插销选择
+            //4、撤销选择
             //上面 左子树 和 右子树 在dfs出来前已经弹出了   这里只需弹出自己就可以了
+            //或者是  本方法里只把自己加入了 所以只需把自己弹出来即可
             path.pollLast();
         }
     }

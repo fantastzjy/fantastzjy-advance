@@ -15,7 +15,7 @@ public class T111二叉树的最小深度 {
             int size = queue.size();
             for (int i = 0; i < size; i++) {
                 TreeNode node = queue.poll();
-                //最小深度是到叶子节点 如果其中一二个为null 则并不是叶子节点
+                //最小深度是到叶子节点 "如果其中一个子树为null" 则并不是叶子节点 两个子树为null才是叶子结点!!!!!!!!!!!!!!!!
                 if (node.left == null && node.right == null) {
                     return depth;
                 }

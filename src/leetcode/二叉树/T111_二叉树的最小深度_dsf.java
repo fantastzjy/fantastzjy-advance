@@ -1,7 +1,7 @@
 package leetcode.二叉树;
 
 
-public class T111_二叉树的最小深度 {
+public class T111_二叉树的最小深度_dsf {
 
     public int minDepth(TreeNode root) {
         int mindept = Integer.MAX_VALUE;
