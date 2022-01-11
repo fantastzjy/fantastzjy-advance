@@ -1,4 +1,4 @@
-package leetcode.队列_栈.栈队列相互实现;
+package leetcode.队列_栈;
 
 import java.util.Stack;
 

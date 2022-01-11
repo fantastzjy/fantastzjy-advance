@@ -7,7 +7,7 @@ package leetcode.链表;
  * <p>
  * https://leetcode-cn.com/problems/reverse-nodes-in-k-group/
  */
-public class T25_K个一组翻转链表 {
+public class T25_K个一组翻转链表_多练 {
 
     public ListNode reverseKGroup(ListNode head, int k) {
 

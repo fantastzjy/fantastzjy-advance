@@ -26,14 +26,15 @@ public class T20_有效的括号 {
         Deque<Character> stack = new LinkedList<Character>();
         for (int i = 0; i < n; i++) {
             char ch = s.charAt(i);
-            //如果包含说明是右括号    注意后面是pairs.get(ch)
+            //如果包含说明是右括号 看其中是否存在左括号   注意后面是pairs.get(ch)
             if (pairs.containsKey(ch)) {
+                //要保证栈中最右边的和该右括号匹配才可以
                 if (stack.isEmpty() || stack.peek() != pairs.get(ch)) {
                     return false;
                 }
                 stack.pop();
 
-                //是左括号
+                //是左括号 直接放入
             } else {
                 stack.push(ch);
             }

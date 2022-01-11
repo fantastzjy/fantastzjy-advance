@@ -4,6 +4,7 @@ package leetcode.链表;
 //额外定义几个指针用作暂存边界位置节点
 //前面用pre curr标记 后面用next标记 当区间返转完 pre走到了区间的最后一个节点
 
+/*将一段翻转*/
 public class T92_反转链表II {
 
     public ListNode reverseBetween(ListNode head, int left, int right) {
@@ -25,7 +26,7 @@ public class T92_反转链表II {
 
         //才开始写下面的是想到  如果prev指向要交换的 前面一个的话会导致ledt节点的next指向pre
         //但是不用管这个  因为指向了又如何？ 没关系
-        //pre = curr;
+        //pre = curr;T92_反转链表IIT92_反转链表II
         //curr = curr.next;
         //next = curr;
 
@@ -36,7 +37,6 @@ public class T92_反转链表II {
             pre = curr;
             curr = next;
         }
-
 
 
         //如果pre2 不是null 就正常连接   如果是null  head节点自然就是 pre

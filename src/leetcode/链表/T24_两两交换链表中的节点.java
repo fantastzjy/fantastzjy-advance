@@ -25,9 +25,10 @@ public class T24_两两交换链表中的节点 {
             //按照从前往后的顺序比较快  尽量按顺序
             //直接用n1.next存储n2.next  顺便对n1 向后面做一个连接 ！！！！！！
             n1.next = n2.next;
+            n2.next = n1;
 
             curr.next = n2;
-            n2.next = n1;
+
 
             curr = n1;
 
