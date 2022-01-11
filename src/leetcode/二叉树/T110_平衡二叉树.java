@@ -9,7 +9,9 @@ public class T110_平衡二叉树 {
             if (root == null) {
                 return true;
             } else {
-                return Math.abs(height(root.left) - height(root.right)) <= 1 && isBalanced(root.left) && isBalanced(root.right);
+                //自身平衡且子树也平衡
+                return Math.abs(height(root.left) - height(root.right)) <= 1
+                        && isBalanced(root.left) && isBalanced(root.right);
             }
         }
 

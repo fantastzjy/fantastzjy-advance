@@ -18,7 +18,9 @@ public class T101_对称二叉树 {
             return false;
         }
         //合并操作   判断值是否相同  不是节点p==q
-        return p.val == q.val && check(p.left, q.right) && check(q.left, p.right);
+        return p.val == q.val
+                && check(p.left, q.right)
+                && check(q.left, p.right);
     }
 }
 
