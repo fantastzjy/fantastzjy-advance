@@ -17,6 +17,8 @@ public class T82_删除排序链表中的重复元素II {
                     int x = cur.next.val;
                     while (cur.next != null && cur.next.val == x) {
                         //如果相等 就等于下一个   当下一个进不来该循环 cur就正好是不相等的那一个
+                        //当相等时 curr的next一直在被替代
+                        //当不相等后 curr也正好变成了 不相等的那个 跳出本while 重复的也被删完了
                         cur.next = cur.next.next;
                     }
                 } else {
