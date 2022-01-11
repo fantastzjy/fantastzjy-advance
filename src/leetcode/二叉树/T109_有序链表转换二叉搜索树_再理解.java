@@ -1,7 +1,7 @@
 package leetcode.二叉树;
 //链接：https://leetcode-cn.com/problems/convert-sorted-list-to-binary-search-tree/solution/you-xu-lian-biao-zhuan-huan-er-cha-sou-suo-shu-1-3/
 
-public class T109_有序链表转换二叉搜索树 {
+public class T109_有序链表转换二叉搜索树_再理解 {
 
     //法一：分治
     class Solution {
