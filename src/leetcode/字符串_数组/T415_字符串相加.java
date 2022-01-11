@@ -20,11 +20,11 @@ public class T415_字符串相加 {
             i--;
             j--;
         }
-        // 计算完以后的答案需要翻转过来!!!!!!!!
+        // 计算完以后的答案需要翻转过来!!!!!!!!   妙
         ans.reverse();
         return ans.toString();
     }
 }
 
 
-//        链接：https://leetcode-cn.com/problems/add-strings/solution/zi-fu-chuan-xiang-jia-by-leetcode-solution/
+//  https://leetcode-cn.com/problems/add-strings/solution/zi-fu-chuan-xiang-jia-by-leetcode-solution/

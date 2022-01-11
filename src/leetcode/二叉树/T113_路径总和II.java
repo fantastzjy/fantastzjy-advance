@@ -4,6 +4,7 @@ import java.util.Deque;
 import java.util.LinkedList;
 import java.util.List;
 
+//与上面的一样    创建新集合都可以把自身类型的集合当做参数传进来 集合中的元素都添加进来
 public class T113_路径总和II {
 
     List<List<Integer>> ret = new LinkedList<List<Integer>>();
@@ -29,6 +30,7 @@ public class T113_路径总和II {
         if (root.left == null && root.right == null && targetSum == 0) {
             ret.add(new LinkedList<Integer>(path));
         }
+
         //做选择   这里把做判断右子树是否为null放到了basecase里面
         if (root.left != null) {
             dfs(root.left, targetSum);
@@ -45,6 +47,4 @@ public class T113_路径总和II {
     }
 }
 
-//        链接：https://leetcode-cn.com/problems/path-sum-ii/solution/lu-jing-zong-he-ii-by-leetcode-solution/
-//        来源：力扣（LeetCode）
-//        著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+//   https://leetcode-cn.com/problems/path-sum-ii/solution/lu-jing-zong-he-ii-by-leetcode-solution/

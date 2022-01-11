@@ -26,27 +26,30 @@ public class T662_二叉树最大宽度_bfs_好 {
 
         q.add(root);
         indexQ.add(1);
+
         while (!q.isEmpty()) {
             int levelSize = q.size();
             //没进入循环前先记录下初始位置的index  末尾的index每次在循环中更新
-            int initialIndex = indexQ.peek();  //这里不取出来  在里面还要根据index计算要存入的index
-            int index = initialIndex;
+            //这里不取出来  在里面还要根据currIndex计算要存入的currIndex
+            int initialIndex = indexQ.peek();
+            int currIndex = initialIndex;
+
             while (levelSize > 0) {
                 TreeNode cur = q.poll();
-                index = indexQ.poll();
+                currIndex = indexQ.poll();
                 if (cur != null) {
                     if (cur.left != null) {
                         q.add(cur.left);
-                        indexQ.add(index * 2);
+                        indexQ.add(currIndex * 2);
                     }
                     if (cur.right != null) {
                         q.add(cur.right);
-                        indexQ.add(index * 2 + 1);
+                        indexQ.add(currIndex * 2 + 1);
                     }
                 }
                 levelSize--;
             }
-            int width = index - initialIndex + 1;
+            int width = currIndex - initialIndex + 1;
             result = Math.max(result, width);
         }
         return result;

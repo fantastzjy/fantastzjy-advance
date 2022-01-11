@@ -12,7 +12,9 @@ public class T222_完全二叉树的节点个数 {
         // 由于给的是完全二叉树  必定包含一颗满二叉树 如果是就省略好多递归计算
 
         int left = 0, right = 0;
-        TreeNode leftnNode = root, rightNode = root;  //这里一定要用一个temp node
+        //这里一定要用一个temp node
+        TreeNode leftnNode = root, rightNode = root;
+
         //while (leftnNode.left != null) {  这样写会少一层
         while (leftnNode != null) {
             left++;

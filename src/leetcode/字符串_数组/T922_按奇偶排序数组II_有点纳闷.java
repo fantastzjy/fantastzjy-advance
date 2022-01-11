@@ -3,7 +3,7 @@ package leetcode.字符串_数组;
 /**
  * 思想 一层for循环   当偶数位不为偶数位时 while循环找出一个奇数位的进行交换
  */
-public class T922_按奇偶排序数组II {
+public class T922_按奇偶排序数组II_有点纳闷 {
 
     public int[] sortArrayByParityII(int[] nums) {
 
@@ -13,9 +13,11 @@ public class T922_按奇偶排序数组II {
             //从偶数‘序列中’找到奇数
             if (nums[i] % 2 == 1) {
                 //从奇数‘序列中’找到偶数
+                //这里后面不应该是 ==2  吗？
                 while (j < nums.length && nums[j] % 2 == 1) {
                     j += 2;
                 }
+
                 int temp = nums[i];
                 nums[i] = nums[j];
                 nums[j] = temp;

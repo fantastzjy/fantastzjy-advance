@@ -1,6 +1,6 @@
 package leetcode.字符串_数组.双指针;
 
-public class T26删除有序数组中的重复项 {
+public class T26_删除有序数组中的重复项 {
     //写法一
     public int removeDuplicates(int[] nums) {
         int slow = 0, fast = 1;

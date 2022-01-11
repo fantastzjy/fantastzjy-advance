@@ -18,7 +18,7 @@ public class T54_螺旋矩阵 {
         int right = matrix[0].length - 1;
         String dir = "right";
         //巧妙标志方向控制方向
-        //利用  利用左右边界是否重叠 判断是否遍历完  如果不是等于的话最后遍历不完
+        //利用  利用左右边界是否重叠 判断是否遍历完  如果不是等于的话最后中心那些遍历不完
         while (left <= right && up <= down) {
             if (dir.equals("right")) {
                 for (int i = left; i <= right; i++) {

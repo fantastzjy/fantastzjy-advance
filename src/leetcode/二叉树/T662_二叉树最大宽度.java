@@ -32,6 +32,7 @@ public class T662_二叉树最大宽度 {
                 if (a.node != null) {
                     queue.add(new AnnotatedNode(a.node.left, a.depth + 1, a.pos * 2));
                     queue.add(new AnnotatedNode(a.node.right, a.depth + 1, a.pos * 2 + 1));
+                    //判断是否进入的是新的一层 及时记录最左边的边界
                     if (curDepth != a.depth) {
                         curDepth = a.depth;
                         left = a.pos;
