@@ -22,7 +22,7 @@ public class T3_无重复字符的最长子串_优化 {
             //这里很巧妙！！！！！   把重复的char的位置更新了 不用删除就行  相当于变相的删除旧的key
             // 用character做为key 利用key只有一个的特性 确保char只有一个
 
-            //不管是否更新left，都要更新 s.charAt(i) 的位置！
+            //不管是否更新left，都要更新 s.charAt(i) 的位置！   map里面的元素不用剔除  因为left控制左边！
             map.put(s.charAt(i), i);
             max = Math.max(max, i - left + 1);
         }

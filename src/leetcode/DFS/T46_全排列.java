@@ -50,7 +50,6 @@ public class T46_全排列 {
             backtrack(nums, track);
             // 取消选择
             //track.removeLast();//LinkedList的方法
-            //track.remove(nums[i]);
             track.remove(track.size() - 1);//还是创建LinkedList比较方便，不用管索引
         }
     }

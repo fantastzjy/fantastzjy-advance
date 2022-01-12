@@ -33,12 +33,16 @@ public class T22_括号生成 {
 
     public void backtrack(LinkedList<String> track, int l, int r) {
         //public void backtrack(ArrayList<String> track, int l, int r) {
+        //左边剩下的比右边多 不合格
         if (l > r) {
             return;
         }
+        //其中一个超过n 不合格
         if (l < 0 || r < 0) {
             return;
         }
+
+        //若相等则正好匹配完成
         if (l == 0 && r == 0) {
             StringBuilder sb = new StringBuilder();
             Iterator<String> iterator = track.iterator();

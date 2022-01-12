@@ -21,6 +21,7 @@ public class 寻找左侧边界的二分搜索 {
         if (left >= nums.length || nums[left] != target) {
             return -1;
         }
+
         return left;
     }
 }
