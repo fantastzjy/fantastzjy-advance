@@ -51,6 +51,7 @@ public class Offer_II_027_回文链表 {
             length++;
         }
 
+        
         int[] arr = new int[length];
         int i = 0;
         while (head != null) {
