@@ -1,5 +1,7 @@
 package leetcode.链表;
 
+import leetcode.ListNode;
+
 public class T148_排序链表_ {
 
     public static void main(String[] args) {

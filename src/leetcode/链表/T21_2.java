@@ -1,5 +1,7 @@
 package leetcode.链表;
 
+import leetcode.ListNode;
+
 public class T21_2 {
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
 

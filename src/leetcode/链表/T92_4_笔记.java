@@ -4,6 +4,8 @@ package leetcode.链表;
 //额外定义几个指针用作暂存边界位置节点
 //前面用pre curr标记 后面用next标记 当区间返转完 pre走到了区间的最后一个节点
 
+import leetcode.ListNode;
+
 public class T92_4_笔记 {
     public ListNode reverseBetween(ListNode head, int left, int right) {
 

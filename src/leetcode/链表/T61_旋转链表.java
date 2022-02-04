@@ -1,5 +1,7 @@
 package leetcode.链表;
 
+import leetcode.ListNode;
+
 public class T61_旋转链表 {
 
     //官方解法 闭合成环

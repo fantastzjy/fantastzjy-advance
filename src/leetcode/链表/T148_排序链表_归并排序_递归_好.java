@@ -1,5 +1,7 @@
 package leetcode.链表;
 
+import leetcode.ListNode;
+
 public class T148_排序链表_归并排序_递归_好 {
     public ListNode sortList(ListNode head) {
         if (head == null || head.next == null) return head;

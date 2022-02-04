@@ -1,7 +1,5 @@
 package leetcode.二叉树.二叉搜索树BST;
 
-import leetcode.二叉树.TreeNode;
-
 public class T538把二叉搜索树转换为累加树 {
 
     //把中序遍历反过来即可

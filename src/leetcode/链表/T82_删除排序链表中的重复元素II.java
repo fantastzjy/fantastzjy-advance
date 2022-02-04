@@ -1,5 +1,7 @@
 package leetcode.链表;
 
+import leetcode.ListNode;
+
 public class T82_删除排序链表中的重复元素II {
     //官网方法一：一次遍历
 

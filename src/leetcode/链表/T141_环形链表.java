@@ -1,6 +1,8 @@
 package leetcode.链表;
 
 
+import leetcode.ListNode;
+
 import java.util.HashSet;
 import java.util.Set;
 

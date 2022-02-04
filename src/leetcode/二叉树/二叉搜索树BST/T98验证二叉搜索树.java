@@ -1,7 +1,5 @@
 package leetcode.二叉树.二叉搜索树BST;
 
-import leetcode.二叉树.TreeNode;
-
 public class T98验证二叉搜索树 {
     public boolean isValidBST(TreeNode root) {
 

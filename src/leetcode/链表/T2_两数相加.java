@@ -1,6 +1,8 @@
 package leetcode.链表;
 
 
+import leetcode.ListNode;
+
 public class T2_两数相加 {
 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {

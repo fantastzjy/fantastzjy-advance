@@ -1,5 +1,7 @@
 package leetcode.链表;
 
+import leetcode.ListNode;
+
 public class T328_奇偶链表 {
     public ListNode oddEvenList(ListNode head) {
 

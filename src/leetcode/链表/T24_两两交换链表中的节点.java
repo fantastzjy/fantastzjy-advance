@@ -1,5 +1,7 @@
 package leetcode.链表;
 
+import leetcode.ListNode;
+
 public class T24_两两交换链表中的节点 {
 
     //给定一个链表，两两交换其中相邻的节点，并返回交换后的链表。

@@ -1,5 +1,7 @@
 package leetcode.BFS;
 
+import leetcode.TreeNode;
+
 import java.util.LinkedList;
 
 public class T111二叉树的最小深度 {

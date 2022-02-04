@@ -1,5 +1,7 @@
 package leetcode.链表;
 
+import leetcode.ListNode;
+
 //分治算法   类似归并排序
 public class T23_合并K个升序链表 {
 

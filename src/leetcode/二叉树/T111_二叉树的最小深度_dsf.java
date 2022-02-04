@@ -1,6 +1,8 @@
 package leetcode.二叉树;
 
 
+import leetcode.TreeNode;
+
 public class T111_二叉树的最小深度_dsf {
 
     public int minDepth(TreeNode root) {

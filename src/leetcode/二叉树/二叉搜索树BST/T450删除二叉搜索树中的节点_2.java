@@ -1,7 +1,5 @@
 package leetcode.二叉树.二叉搜索树BST;
 
-import leetcode.二叉树.TreeNode;
-
 public class T450删除二叉搜索树中的节点_2 {
 
     public TreeNode deleteNode(TreeNode root, int key) {

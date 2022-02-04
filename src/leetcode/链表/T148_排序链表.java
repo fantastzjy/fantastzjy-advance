@@ -1,5 +1,7 @@
 package leetcode.链表;
 
+import leetcode.ListNode;
+
 public class T148_排序链表 {
 
     //思路   链表版本的归并排序

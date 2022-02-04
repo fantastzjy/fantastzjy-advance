@@ -1,7 +1,5 @@
 package 笔试.shuidi;
 
-import leetcode.二叉树.TreeNode;
-
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;

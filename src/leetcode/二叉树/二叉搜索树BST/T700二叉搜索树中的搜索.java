@@ -1,7 +1,5 @@
 package leetcode.二叉树.二叉搜索树BST;
 
-import leetcode.二叉树.TreeNode;
-
 public class T700二叉搜索树中的搜索 {
     public TreeNode searchBST(TreeNode root, int val) {
 

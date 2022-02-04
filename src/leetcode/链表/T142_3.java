@@ -1,5 +1,7 @@
 package leetcode.链表;
 
+import leetcode.ListNode;
+
 public class T142_3 {
 
     public ListNode detectCycle(ListNode head) {

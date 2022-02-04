@@ -1,5 +1,7 @@
 package leetcode.链表;
 
+import leetcode.ListNode;
+
 public class T82_2 {
     //官网方法一：一次遍历
 

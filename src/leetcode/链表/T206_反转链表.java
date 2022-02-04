@@ -1,5 +1,7 @@
 package leetcode.链表;
 
+import leetcode.ListNode;
+
 public class T206_反转链表 {
 
     public ListNode reverseList(ListNode head) {

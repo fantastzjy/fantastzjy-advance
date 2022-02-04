@@ -1,5 +1,7 @@
 package leetcode.链表;
 
+import leetcode.ListNode;
+
 /**
  * 给你一个链表，每 k 个节点一组进行翻转，请你返回翻转后的链表。
  * k 是一个正整数，它的值小于或等于链表的长度。
