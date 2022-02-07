@@ -2,6 +2,8 @@ package leetcode.二叉树;
 
 //链接：https://leetcode-cn.com/problems/balanced-binary-tree/solution/ping-heng-er-cha-shu-by-leetcode-solution/
 
+import leetcode.TreeNode;
+
 public class T110_平衡二叉树 {
     //方法一：自顶向下的递归
     class solution1 {

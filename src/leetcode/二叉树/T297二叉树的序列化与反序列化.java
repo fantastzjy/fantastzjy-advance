@@ -1,5 +1,7 @@
 package leetcode.二叉树;
 
+import leetcode.TreeNode;
+
 import java.util.LinkedList;
 
 public class T297二叉树的序列化与反序列化 {

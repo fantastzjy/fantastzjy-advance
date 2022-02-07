@@ -1,5 +1,7 @@
 package leetcode.二叉树;
 
+import leetcode.TreeNode;
+
 public class T105_从前序与中序遍历序列构造二叉树 {
     //  [1],[2,4,7],[3,5,6,8]
     //  [4,7,2],[1],[5,3,8,6]

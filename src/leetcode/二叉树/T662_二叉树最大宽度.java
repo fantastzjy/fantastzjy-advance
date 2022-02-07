@@ -1,5 +1,7 @@
 package leetcode.二叉树;
 
+import leetcode.TreeNode;
+
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;

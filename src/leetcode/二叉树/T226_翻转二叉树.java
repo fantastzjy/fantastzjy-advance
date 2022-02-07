@@ -1,6 +1,8 @@
 package leetcode.二叉树;
 
 
+import leetcode.TreeNode;
+
 public class T226_翻转二叉树 {
 
     public TreeNode invertTree(TreeNode root) {

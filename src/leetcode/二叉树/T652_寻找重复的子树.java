@@ -1,5 +1,7 @@
 package leetcode.二叉树;
 
+import leetcode.TreeNode;
+
 import java.util.List;
 
 public class T652_寻找重复的子树 {

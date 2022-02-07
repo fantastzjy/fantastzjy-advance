@@ -1,6 +1,8 @@
 package leetcode.offer;
 
 
+import leetcode.ListNode;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;

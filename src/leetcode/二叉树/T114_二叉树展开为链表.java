@@ -1,5 +1,7 @@
 package leetcode.二叉树;
 
+import leetcode.TreeNode;
+
 public class T114_二叉树展开为链表 {
     public void flatten(TreeNode root) {
         // base case

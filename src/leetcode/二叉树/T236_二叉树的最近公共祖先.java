@@ -1,4 +1,5 @@
 package leetcode.二叉树;
+import leetcode.TreeNode;
 
 //用前序遍历 判断当前root节点是否等于目标节点  并不是root.val 是否等于目标节点！！！
 //如果等于目标节点就返回root   如果不是就继续后序遍历
