@@ -22,7 +22,16 @@ public class string测试 {
     }
 
     public static void main(String[] args) {
-
+        /*
+        总结：
+        如果是字面量创建
+            直接在字符串常量池中创建并返回池中地址  不会在堆里面 new对象
+        如果是new创建 字符串常量池和堆中都会创建
+            调用intern 1.7 如果是拼接创建的new String("a")+new String("b") 常量池中不含有该字符串 ab   调用intern 会将堆中的地址引用赋值给常量池 1.6 是在常量池中创建一个新的ab
+                          如果是直接创建 new String("ab")  堆中和常量池(假如没有)都各自创建一个  ab   调用intern会返回常量池中的地址
+           如果定义为 final String s2 = “ab” 表示s2 （注意没有new） 是一个常量 在进行拼接操作时当做常量处理   其他的只要包含变量就会创建新的
+           如果定义为 final String s2 = new String("hello");   s2不是一个常量 只是一个不可变量
+         */
         //一组
         {
             //String s1 = new String("hello");
@@ -77,16 +86,6 @@ public class string测试 {
         //        //}
 
     }
-/*
-总结：
-如果是字面量创建
-    直接在字符串常量池中创建并返回池中地址  不会在堆里面 new对象
-如果是new创建 字符串常量池和堆中都会创建
-    调用intern 1.7 如果是拼接创建的new String("a")+new String("b") 常量池中不含有该字符串 ab   调用intern 会将堆中的地址引用赋值给常量池 1.6 是在常量池中创建一个新的ab
-                  如果是直接创建 new String("ab")  堆中和常量池(假如没有)都各自创建一个  ab   调用intern会返回常量池中的地址
-   如果定义为 final String s2 = “ab” 表示s2 （注意没有new） 是一个常量 在进行拼接操作时当做常量处理   其他的只要包含变量就会创建新的
-   如果定义为 final String s2 = new String("hello");   s2不是一个常量 只是一个不可变量
- */
 
 
 }

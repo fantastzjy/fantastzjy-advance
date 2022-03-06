@@ -2,6 +2,8 @@ package leetcode.图;
 
 import java.util.*;
 
+//https://leetcode-cn.com/problems/network-delay-time/submissions/
+
 public class T743_网络延迟时间 {
 
 
@@ -28,7 +30,7 @@ public class T743_网络延迟时间 {
 
         //构造图
         List<int[]>[] graph = new LinkedList[n + 1];
-        for (int i = 0; i < graph.length; i++) {
+        for (int i = 1; i < graph.length; i++) {
             graph[i] = new LinkedList<>();
         }
         for (int[] time : times) {
@@ -45,6 +47,7 @@ public class T743_网络延迟时间 {
         //寻找最大值
         int max = 0;
         for (int i = 1; i < distTo.length; i++) {
+
             if (distTo[i] == Integer.MAX_VALUE) {
                 return -1;
             }
@@ -56,7 +59,9 @@ public class T743_网络延迟时间 {
 
     private int[] dijkstra(List<int[]>[] graph, int start) {
 
-        int[] distTo = new int[graph.length + 1];
+        //这里赋值大了导致出错
+        //int[] distTo = new int[graph.length + 1];
+        int[] distTo = new int[graph.length];
         Arrays.fill(distTo, Integer.MAX_VALUE);
         distTo[start] = 0;
 

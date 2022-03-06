@@ -17,8 +17,6 @@ public class Singleton_静态内部类 {
     public static Singleton_静态内部类 getInstance() {
         return Singleton_neibuleiHolder.INSTANCE;
     }
-
-
     public static void main(String[] args) {
         for (int i = 0; i < 100; i++) {
             new Thread(() -> {
