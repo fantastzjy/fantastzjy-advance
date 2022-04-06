@@ -1,4 +1,4 @@
-package z7z8.datasource_my.linkedList;
+package Z7z8.datasource_my.linkedList;
 
 //package linkedList;
 

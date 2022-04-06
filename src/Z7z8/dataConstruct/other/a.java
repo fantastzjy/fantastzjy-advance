@@ -1,4 +1,4 @@
-package z7z8.dataConstruct.other;
+package Z7z8.dataConstruct.other;
 
 
 

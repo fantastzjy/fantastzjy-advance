@@ -1,4 +1,4 @@
-package z7z8.dataConstruct_20.Queue;
+package Z7z8.dataConstruct_20.Queue;
 
 import java.util.Scanner;
 

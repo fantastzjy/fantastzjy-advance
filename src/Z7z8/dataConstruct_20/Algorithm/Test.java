@@ -1,4 +1,4 @@
-package z7z8.dataConstruct_20.Algorithm;
+package Z7z8.dataConstruct_20.Algorithm;
 
 import java.util.HashSet;
 

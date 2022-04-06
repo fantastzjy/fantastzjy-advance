@@ -1,4 +1,4 @@
-package z7z8.dataConstruct.atguigu.sparsearray;
+package Z7z8.dataConstruct.atguigu.sparsearray;
 
 public class SparseArray {
 
