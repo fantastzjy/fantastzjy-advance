@@ -1,4 +1,6 @@
-public class t1 {
+package 笔试;
+
+public class tshopee_1 {
 
 
     public int MinOperations(String s) {

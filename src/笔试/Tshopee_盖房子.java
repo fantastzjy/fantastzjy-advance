@@ -1,3 +1,5 @@
+package 笔试;
+
 public class Tshopee_盖房子 {
     int N = 0;
     boolean[] isComeCol;
