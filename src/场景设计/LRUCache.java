@@ -9,7 +9,7 @@ public class LRUCache {
 
     public static void main(String[] args) {
 
-        LRUCache lruCacheDemo = new LRUCache(3);
+        LRUCache_ lruCacheDemo = new LRUCache_(3);
         lruCacheDemo.put(1, 1);
         lruCacheDemo.put(2, 2);
         lruCacheDemo.put(3, 3);
@@ -29,17 +29,27 @@ public class LRUCache {
 
     }
 
+    //总体思考：    Node<K,V>   双向链表的节点  有前后指针       要有一个空参的构造方法
+    //              DoubleLinked<K,V>    双向链表    get方法的传参直接就是Node  因为是从map中取出来的node来get的
+    //                                含有方法：   remove  addHead    getLast
+
+
+    //在初始化双向链表时  要写个无参构造器  进行首尾相连  形成一个链表    那所以node类中 要含有一个无参构造器
+    //get方法   就直接从map中获取    然后同步更新链表中
+    //put方法   若map中由该值  更新map与list     不含则判断是否容量已满
+
+
     // 1.构造一个node节点作为数据载体
+    //链表的节点是双向链表的节点！！！所以有前后指针！！！！
     class Node<K, V> {
         K key;
         V value;
         Node<K, V> prev;
         Node<K, V> next;
 
-        //初始化  如果没有的话会造成 其他类调用
+        //初始化  如果没有的话 在new Node时 不能使用空的构造方法，，虽然字节码文件中由无参构造函数
         public Node() {
-            //构造函数 对node进行初始化
-            //this.prev = this.next = null;
+
         }
 
         public Node(K key, V value) {
@@ -50,8 +60,8 @@ public class LRUCache {
 
     }
 
-    // 2.构建一个虚拟的双向链表,,里面安放的就是我们的Node
-    //双线链表需要输入kv 是因为node这个类 是个泛型类
+    // 2.双向链表
+    //双线链表需要输入 kv 是因为node这个类 是个泛型类
     class DoubleLinkedList<K, V> {
         Node<K, V> head;
         Node<K, V> tail;
@@ -64,19 +74,18 @@ public class LRUCache {
             tail.prev = head;
         }
 
-        //添加到头
+
         public void addHead(Node<K, V> node) {
-            //由于是插在头部  所以尾结点不丢就行  先处理尾结点  不一定按照下面
+            //先对当前链表的前后指针赋值，在对插入处的节点前后做处理
+
             node.next = head.next;
             node.prev = head;
-            //注意顺序
-            //由于是在投不添加，所以要根据头节点将原来的第二个节点的前一个节点设置为当前节点
-            head.next.prev = node;
+            node.next.prev = node;//等效于  head.next.prev = node；
             head.next = node;
-            //tail.prev = node;  不是这个 添加到头  和尾没关系
+
         }
 
-        // 4.删除节点
+        // 4.删除节点   这里不用再遍历寻找了 因为传进来的就是在map里面存的一模一样的！！！！！！
         public void removeNode(Node<K, V> node) {
             node.next.prev = node.prev;
             node.prev.next = node.next;
@@ -101,8 +110,8 @@ public class LRUCache {
 
     public LRUCache(int capacity) {
         this.capacity = capacity;
-        map = new HashMap<>();
-        doubleLinkedList = new DoubleLinkedList<>();
+        this.map = new HashMap<>();
+        this.doubleLinkedList = new DoubleLinkedList<>();
     }
 
     public int get(int key) {
@@ -132,7 +141,7 @@ public class LRUCache {
                 //两个地方都要删除，注意顺序
                 //map.remove(doubleLinkedList.getLast());  注意 是根据key删除的
                 Node<Integer, Integer> lastNode = doubleLinkedList.getLast();
-                Node<Integer, Integer> remove = map.remove(lastNode.key);
+                map.remove(lastNode.key);
                 doubleLinkedList.removeNode(lastNode);
             }
             //新增一个

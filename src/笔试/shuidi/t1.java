@@ -1,6 +1,6 @@
 package 笔试.shuidi;
 
-import leetcode.TreeNode;
+import Leetcode.TreeNode;
 
 import java.util.LinkedList;
 import java.util.List;

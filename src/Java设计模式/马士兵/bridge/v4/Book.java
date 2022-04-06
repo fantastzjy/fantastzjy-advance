@@ -1,0 +1,4 @@
+package Java设计模式.马士兵.bridge.v4;
+
+public class Book extends GiftImpl {
+}

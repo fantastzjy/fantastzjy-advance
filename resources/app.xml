@@ -17,12 +17,12 @@
 
     -->
 
-    <bean id="tank" class="设计模式.马士兵.spring.v1.Tank"/>
-    <bean id="timeProxy" class="设计模式.马士兵.spring.v1.TimeProxy"/>
+    <bean id="tank" class="Java设计模式.马士兵.spring.v1.Tank"/>
+    <bean id="timeProxy" class="Java设计模式.马士兵.spring.v1.TimeProxy"/>
 
     <aop:config>
         <aop:aspect id="time" ref="timeProxy">
-            <aop:pointcut id="onmove" expression="execution(void 设计模式.马士兵.spring.v1.Tank.move())"/>
+            <aop:pointcut id="onmove" expression="execution(void Java设计模式.马士兵.spring.v1.Tank.move())"/>
             <aop:before method="before" pointcut-ref="onmove"/>
             <aop:after method="after" pointcut-ref="onmove"/>
         </aop:aspect>
