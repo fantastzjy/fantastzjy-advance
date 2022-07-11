@@ -26,7 +26,7 @@ public class T3_无重复字符的最长子串 {
                     set.remove(s.charAt(left));
                     left++;
                 }
-                //!删完之后再将当前与元素加上
+                //!删完之后再将当前与元素加上    这里不用处理长度了  因为删除了就不是最长了
                 set.add(c);
             }
         }

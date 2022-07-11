@@ -1,9 +1,9 @@
 package Leetcode.数学;
 
 // https://leetcode-cn.com/problems/shu-zu-zhong-shu-zi-chu-xian-de-ci-shu-lcof/
-public class 剑指Offer56_II_数组中数字出现的次数 {
-    //一个整型数组 nums 里除两个数字之外，其他数字都出现了两次。
-    // 请写程序找出这两个只出现一次的数字。要求时间复杂度是O(n)，空间复杂度是O(1)。
+public class Offer56_数组中数字出现的次数 {
+    //一个整型数组 nums 里有两个数字只出现一次，其他数字都出现了两次。找出这两个只出现一次的数字。
+    // 要求时间复杂度是O(n)，空间复杂度是O(1)。
 
 
     //大佬总结
