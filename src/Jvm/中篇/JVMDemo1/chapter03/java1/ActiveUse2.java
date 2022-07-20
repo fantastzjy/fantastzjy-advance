@@ -1,4 +1,4 @@
-package com.atguigu.java1;
+package Jvm.中篇.JVMDemo1.chapter03.java1;
 
 import org.junit.Test;
 

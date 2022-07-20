@@ -1,5 +1,4 @@
-package com.atguigu.java1;
-
+package Jvm.中篇.JVMDemo1.chapter02.java1;
 /**
  * @author shkstart
  * @create 2020-09-08 10:38

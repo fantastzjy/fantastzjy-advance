@@ -1,4 +1,4 @@
-package com.atguigu.java2;
+package Jvm.中篇.JVMDemo1.chapter04.com.java2;
 
 /**
  * @author shkstart

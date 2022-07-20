@@ -1,4 +1,4 @@
-package com.atguigu.java1;
+package Jvm.中篇.JVMDemo1.chapter02.java1;
 
 import java.io.File;
 import java.io.FileInputStream;
