@@ -1,8 +1,6 @@
 package Java_JVM.B_中篇_字节码与类的加载.chapter03_类的加载过程详解.java_p63_p70;
 
 /**
- * @author shkstart
- * @create 2020-09-13 10:50
  *
  * 过程二：链接阶段
  *
@@ -16,7 +14,7 @@ public class LinkingTest {
     private static final int num = 1; //
 
     public static final String constStr = "CONST";
-//    public static final String constStr1 = new String("CONST");
+    //public static final String constStr1 = new String("CONST");
 
     public Object getObj(){
         return null;

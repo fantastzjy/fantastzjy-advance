@@ -15,8 +15,8 @@ public class ActiveUse2 {
     @Test
     public void test1(){
 //        System.out.println(User.num);
-//        System.out.println(User.num1);
-        System.out.println(User.num2);
+//        System.out.println(User.num1);//获取的是常量的值，未涉及到clinit方法的执行       <注意，此时加载还是加载了，只是没有进行初始化>
+        System.out.println(User.num2);//new Random() 要调用该方法，该方法在clinit方法中，所以一定需要执行clinit，就进行了初始化
     }
 
     @Test
@@ -37,8 +37,10 @@ class User{
 
 }
 
-interface CompareA{
-    public static final Thread t = new Thread(){
+interface CompareA {
+
+    //匿名内部类，作用：如果执行clinit时输出，监测是否执行初始化过程，<在初始化时执行clinit方法>
+    public static final Thread t = new Thread() {
         {
             System.out.println("CompareA的初始化");
         }

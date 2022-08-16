@@ -39,7 +39,7 @@ class Person{
     static{
         System.out.println("Person类的初始化");
     }
-    public static final int NUM = 1;//在链接过程的准备环节就被赋值为1了。
+    public static final int NUM = 1;//在链接过程的准备环节就被赋值为1了。用不着在执行初始化了
     public static final int NUM1 = new Random().nextInt(10);//此时的赋值操作需要在<clinit>()中执行
 }
 

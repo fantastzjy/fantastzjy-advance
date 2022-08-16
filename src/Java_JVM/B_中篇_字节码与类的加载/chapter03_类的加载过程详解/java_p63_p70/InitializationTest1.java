@@ -1,8 +1,6 @@
 package Java_JVM.B_中篇_字节码与类的加载.chapter03_类的加载过程详解.java_p63_p70;
 
 /**
- * @author shkstart
- * @create 2020-09-14 18:49
  * 哪些场景下，java编译器就不会生成<clinit>()方法
  */
 public class InitializationTest1 {

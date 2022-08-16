@@ -4,8 +4,7 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 
 /**
- * @author shkstart
- * @create 2020-09-11 17:39
+ *
  * 过程一：加载阶段
  *
  * 通过Class类，获得了java.lang.String类的所有方法信息，并打印方法访问标识符、描述符
