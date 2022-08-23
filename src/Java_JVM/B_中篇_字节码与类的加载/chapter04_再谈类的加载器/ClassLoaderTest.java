@@ -1,9 +1,6 @@
 package Java_JVM.B_中篇_字节码与类的加载.chapter04_再谈类的加载器;
 
-/**
- * @author shkstart
- * @create 16:03
- */
+
 public class ClassLoaderTest {
     //public static void main(String[] args) {
     //    System.out.println(ClassLoaderTest.class.getClassLoader());
