@@ -1,4 +1,4 @@
-package java_design_patterns.factory;
+package java_design_patterns.factory.abstractFantory_案例2_mashibing;
 
 /**
  * 抽象工厂

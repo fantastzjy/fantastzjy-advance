@@ -1,4 +1,4 @@
-package java_design_patterns.factory;
+package java_design_patterns.factory.factoryMethod;
 
 /*
 ### 工厂方法
@@ -9,7 +9,7 @@ package java_design_patterns.factory;
 1、Collection 接口这个抽象工厂中定义了一个抽象的 `iterator` 工厂方法，返回一个 Iterator 类的抽象产品。
 该方法通过 ArrayList 、HashMap 等具体工厂实现，返回 Itr、KeyIterator 等具体产品。
 
-2、Spring 的 FactoryBean 接口的 `getObject` 方法。
+2、Spring 的 FactoryBean 接口的 `getObject` 方法也是一个工厂方法。
 
 **举例**
 多个工厂和一种抽象产品。例如一个麦当劳店可以生产汉堡，一个肯德基店也可以生产汉堡。

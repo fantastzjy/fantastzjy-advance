@@ -1,4 +1,4 @@
-package java_design_patterns.factory;
+package java_design_patterns.factory.simpleFactory;
 
 /**
  * 简单工厂
