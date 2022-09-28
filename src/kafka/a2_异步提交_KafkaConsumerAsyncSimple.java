@@ -11,13 +11,15 @@ import java.util.Properties;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
- * @Package: kafka
- * @ClassName: KafkaConsumerAsyncSimple
- * @Author: jiaying2.zhang
- * @CreateTime: 2022-9-28 14:46
- * @Description:
+ * 异步提交方式。手动提交有一个缺点，就是当发起提交时调用应用会阻塞。
+ * 当然我们可以减少手动提交的频率，但这个会增加消息重复的概率（和自动提交一样）。
+ * 另外一个解决方法是，使用异步提交。
+ * 但是异步提交也有一个缺点，那就是如果服务器返回提交失败，异步提交不会进行重试。
+ * 相比较起来，同步提交会进行重试知道成功或者最后抛出异常给应用。
+ * 异步提交没有实现重试是因为，如果同时存在多个异步提交，进行重试可能会导致位移覆盖。
+ * 比如，我们发起一个异步提交commitA，此时提交位移是2000，随后又发起了一个异步提交commitB且位移为3000，commitA提交失败但commitB提交失败，此时commitA进行重试并成功的话，会将实际上已经提交的位移从3000回滚到2000，导致消息重复消费。
  */
-public class KafkaConsumerAsyncSimple {
+public class a2_异步提交_KafkaConsumerAsyncSimple {
     private static AtomicBoolean running = new AtomicBoolean(true);
 
     // 设置服务器地址

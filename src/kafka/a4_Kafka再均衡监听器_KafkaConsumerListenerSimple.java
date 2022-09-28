@@ -7,14 +7,8 @@ import org.apache.kafka.common.serialization.StringDeserializer;
 import java.time.Duration;
 import java.util.*;
 
-/**
- * @Package: kafka
- * @ClassName: KafkaConsumerListenerSimple
- * @Author: jiaying2.zhang
- * @CreateTime: 2022-9-28 14:48
- * @Description:
- */
-public class KafkaConsumerListenerSimple {
+
+public class a4_Kafka再均衡监听器_KafkaConsumerListenerSimple {
 
     // 设置服务器地址
     private static final String bootstrapServer = "192.168.110.142:9092";

@@ -12,11 +12,9 @@ import java.util.List;
 import java.util.Map;
 
 /**
- *
- * @author 消费者拦截器
- *
+ *  消费者拦截器
  */
-public class ConsumerInterceptorTTL implements ConsumerInterceptor<String, String> {
+public class a5_消费者拦截器_ConsumerInterceptorTTL implements ConsumerInterceptor<String, String> {
 
     // 十秒钟
     private static final long EXPIRE_INTERVAL = 10 * 1000; // 10000

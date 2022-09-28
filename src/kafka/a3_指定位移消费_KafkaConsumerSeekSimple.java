@@ -11,14 +11,8 @@ import java.util.Properties;
 import java.util.Set;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-/**
- * @Package: kafka
- * @ClassName: KafkaConsumerSeekSimple
- * @Author: jiaying2.zhang
- * @CreateTime: 2022-9-28 14:47
- * @Description:
- */
-public class KafkaConsumerSeekSimple {
+
+public class a3_指定位移消费_KafkaConsumerSeekSimple {
     private static AtomicBoolean running = new AtomicBoolean(true);
 
     // 设置服务器地址

@@ -10,14 +10,8 @@ import java.time.Duration;
 import java.util.Collections;
 import java.util.Properties;
 
-/**
- * @Package: kafka
- * @ClassName: KafkaConsumerInterceptorSimple
- * @Author: jiaying2.zhang
- * @CreateTime: 2022-9-28 14:49
- * @Description:
- */
-public class KafkaConsumerInterceptorSimple {
+
+public class a6_消费者配置监听_KafkaConsumerInterceptorSimple {
     // 设置服务器地址
     private static final String bootstrapServer = "192.168.110.142:9092";
 
@@ -50,7 +44,7 @@ public class KafkaConsumerInterceptorSimple {
         // properties.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, false);
 
         // 指定消费者拦截器
-        properties.put(ConsumerConfig.INTERCEPTOR_CLASSES_CONFIG, ConsumerInterceptorTTL.class.getName());
+        properties.put(ConsumerConfig.INTERCEPTOR_CLASSES_CONFIG, a5_消费者拦截器_ConsumerInterceptorTTL.class.getName());
 
         // 将参数设置到消费者参数中
         KafkaConsumer<String, String> consumer = new KafkaConsumer<String, String>(properties);

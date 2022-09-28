@@ -9,14 +9,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Properties;
 
-/**
- * @Package: kafka
- * @ClassName: KafkaConsumerSimple
- * @Author: jiaying2.zhang
- * @CreateTime: 2022-9-28 14:44
- * @Description:
- */
-public class KafkaConsumerSimple {
+
+public class a1_同步提交_KafkaConsumerSimple {
     // 设置服务器地址
     private static final String bootstrapServer = "192.168.110.142:9092";
 
