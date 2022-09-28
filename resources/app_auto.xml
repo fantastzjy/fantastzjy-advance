@@ -19,8 +19,8 @@
 
     <aop:aspectj-autoproxy/>
 
-    <bean id="tank" class="Java设计模式.马士兵.spring.v2.Tank"/>
-    <bean id="timeProxy" class="Java设计模式.马士兵.spring.v2.TimeProxy"/>
+    <bean id="tank" class="java_design_patterns.马士兵.spring.v2.Tank"/>
+    <bean id="timeProxy" class="java_design_patterns.马士兵.spring.v2.TimeProxy"/>
 
     <!--    <aop:config>-->
     <!--        <aop:aspect id="time" ref="timeProxy">-->
