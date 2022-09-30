@@ -35,6 +35,7 @@ public class a2_异步提交_KafkaConsumerAsyncSimple {
         Properties properties = new Properties();
         // 设置反序列化key参数信息
         properties.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
+
         // 设置反序列化value参数信息
         properties.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
 
@@ -45,7 +46,7 @@ public class a2_异步提交_KafkaConsumerAsyncSimple {
         properties.put(ConsumerConfig.GROUP_ID_CONFIG, groupId);
 
         // 制定kafka消费者对应的客户端id，默认为空，如果不设置kafka消费者会自动生成一个非空字符串。
-        properties.put("client.id", "consumer.client.id.demo");
+        properties.put(ConsumerConfig.CLIENT_ID_CONFIG, "consumer.client.id.demo");
 
         // 设置每次从最早的offset开始消费
         properties.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
@@ -82,10 +83,11 @@ public class a2_异步提交_KafkaConsumerAsyncSimple {
 
             }
         } finally {
-            // 关闭客户端
-            consumer.close();
+            if (consumer != null) {
+                //同步提交最后消费记录
+                consumer.commitSync();
+                consumer.close();
+            }
         }
-
     }
-
 }
