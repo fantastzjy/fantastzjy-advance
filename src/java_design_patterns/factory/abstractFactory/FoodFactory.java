@@ -1,16 +1,16 @@
 package java_design_patterns.factory.abstractFactory;
 
+
 public interface FoodFactory {
-    java_design_patterns.factory.factoryMethod.Hamburger buildHamburger();
+    Hamburger buildHamburger();
 
     Drink buildDrink();
 }
 
-
 class MCFactory implements FoodFactory {
     @Override
-    public java_design_patterns.factory.factoryMethod.Hamburger buildHamburger() {
-        return new java_design_patterns.factory.factoryMethod.MCHamburger();
+    public Hamburger buildHamburger() {
+        return new MCHamburger();
     }
 
     @Override
@@ -21,8 +21,8 @@ class MCFactory implements FoodFactory {
 
 class KFCFactory implements FoodFactory {
     @Override
-    public java_design_patterns.factory.factoryMethod.Hamburger buildHamburger() {
-        return new java_design_patterns.factory.factoryMethod.KFCHamburger();
+    public Hamburger buildHamburger() {
+        return new KFCHamburger();
     }
 
     @Override
@@ -35,14 +35,14 @@ interface Hamburger {
     void eat();
 }
 
-class MCHamburger implements java_design_patterns.factory.factoryMethod.Hamburger {
+class MCHamburger implements Hamburger {
     @Override
     public void eat() {
         System.out.println("吃麦当劳汉堡");
     }
 }
 
-class KFCHamburger implements java_design_patterns.factory.factoryMethod.Hamburger {
+class KFCHamburger implements Hamburger {
     @Override
     public void eat() {
         System.out.println("吃肯德基汉堡");
