@@ -1,4 +1,4 @@
-package kafka;
+package com.fantastzjy.kafkaSum;
 
 import org.apache.kafka.clients.consumer.*;
 import org.apache.kafka.common.TopicPartition;

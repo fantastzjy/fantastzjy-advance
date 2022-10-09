@@ -1,4 +1,4 @@
-package kafka;
+package com.fantastzjy.kafkaSum;
 
 import org.apache.kafka.clients.consumer.*;
 import org.apache.kafka.common.TopicPartition;
@@ -6,7 +6,6 @@ import org.apache.kafka.common.serialization.StringDeserializer;
 
 import java.time.Duration;
 import java.util.*;
-import java.util.regex.Pattern;
 
 
 public class a1_同步提交_KafkaConsumerSimple {

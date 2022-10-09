@@ -4,6 +4,7 @@ import lombok.Builder;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.util.List;
 
 @Data
 @Builder
@@ -27,4 +28,6 @@ public class User implements Serializable {
      * 地址
      */
     private String address;
+
+    private List<Byte> other;
 }

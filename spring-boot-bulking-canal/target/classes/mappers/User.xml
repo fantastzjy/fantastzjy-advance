@@ -22,17 +22,21 @@
 
     <!-- 查询所有用户 -->
     <select id="queryAllUser" resultMap="userResultMap">
-        SELECT * FROM user
+        SELECT *
+        FROM user
     </select>
 
     <select id="queryUserById" resultMap="userResultMap">
-        SELECT * FROM user  WHERE id=#{id}
+        SELECT *
+        FROM user
+        WHERE id = #{id}
     </select>
 
 
     <!-- 分页查询用户 -->
     <select id="querUserByPage" resultMap="userResultMap">
-       SELECT * from user
+        SELECT *
+        from user
     </select>
 
 </mapper>

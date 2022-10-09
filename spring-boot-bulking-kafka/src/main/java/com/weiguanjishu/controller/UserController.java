@@ -10,6 +10,7 @@ import org.springframework.util.concurrent.ListenableFutureCallback;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 @RestController
@@ -28,7 +29,12 @@ public class UserController {
     public Object add1() {
         try {
             Long id = Long.valueOf(new Random().nextInt(1000));
-            User user = User.builder().id(id).userName("TomGE").age(29).address("上海").build();
+            ArrayList beanList = new ArrayList();
+            for (int i = 0; i < 1; i++) {
+                beanList.add(new byte[1024 * 1]);
+            }
+            User user = User.builder().id(id).userName("TomGE").age(29).address("上海").other(beanList).build();
+
             ListenableFuture<SendResult> listenableFuture = kafkaTemplate.send(addUserTopic, JSON.toJSONString(user));
 
             // 提供回调方法，可以监控消息的成功或失败的后续处理
@@ -46,7 +52,7 @@ public class UserController {
                     int partition = sendResult.getRecordMetadata().partition();
                     // 消息在分区内的offset
                     long offset = sendResult.getRecordMetadata().offset();
-                    System.out.println(String.format("发送消息成功，topc：%s, partition: %s, offset：%s ", topic, partition, offset));
+                    //System.out.println(String.format("发送消息成功，topc：%s, partition: %s, offset：%s ", topic, partition, offset));
                 }
             });
             return "消息发送成功";

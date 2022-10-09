@@ -1,4 +1,4 @@
-package kafka;
+package com.fantastzjy.kafkaSum;
 
 import org.apache.kafka.clients.consumer.ConsumerInterceptor;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
