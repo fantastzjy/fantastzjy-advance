@@ -5,6 +5,14 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-bulking-kafka/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-bulking-canal/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-bulking-elasticsearch/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-bulking-caffeine/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-bulking-pulsar/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-bulking-rocketmq/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-bulking-tool/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-bulking-druid/pom.xml" />
       </list>
     </option>
   </component>
