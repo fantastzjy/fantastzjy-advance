@@ -10,6 +10,7 @@
         <module name="spring-boot-bulking-pulsar" />
         <module name="spring-boot-bulking-elasticsearch" />
         <module name="spring-boot-bulking-druid" />
+        <module name="fantastzjy-study" />
         <module name="spring-boot-bulking-tool" />
         <module name="spring-boot-bulking-kafka" />
         <module name="spring-boot-bulking-caffeine" />
@@ -20,7 +21,8 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="fantast_advance" options="" />
+      <module name="fantast_advance" options="-parameters" />
+      <module name="fantastzjy-study" options="-parameters" />
       <module name="spring-boot-bulking-caffeine" options="-parameters" />
       <module name="spring-boot-bulking-canal" options="-parameters" />
       <module name="spring-boot-bulking-druid" options="-parameters" />
