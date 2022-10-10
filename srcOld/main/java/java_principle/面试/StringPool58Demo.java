@@ -1,4 +1,4 @@
-package 面试;
+package java_principle.面试;
 
 public class StringPool58Demo {
     public static void main(String[] args) {

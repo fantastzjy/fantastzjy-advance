@@ -1,4 +1,4 @@
-package com.atguigu.java1;
+package java_jvm.B_中篇_字节码与类的加载.chapter04_再谈类的加载器.com.java1;
 
 import java.io.*;
 import java.nio.ByteBuffer;

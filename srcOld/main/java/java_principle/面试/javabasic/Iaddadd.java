@@ -1,4 +1,4 @@
-package 面试.javabasic;
+package java_principle.面试.javabasic;
 
 public class Iaddadd {
     public static void main(String[] args) {
