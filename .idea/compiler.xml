@@ -21,7 +21,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="fantast_advance" options="-parameters" />
+      <module name="fantast_advance" options="" />
       <module name="fantastzjy-study" options="-parameters" />
       <module name="spring-boot-bulking-caffeine" options="-parameters" />
       <module name="spring-boot-bulking-canal" options="-parameters" />
