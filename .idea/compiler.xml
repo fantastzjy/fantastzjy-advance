@@ -13,6 +13,7 @@
         <module name="fantastzjy-study" />
         <module name="spring-boot-bulking-tool" />
         <module name="spring-boot-bulking-kafka" />
+        <module name="spring-boot-bulking-zjy" />
         <module name="spring-boot-bulking-caffeine" />
         <module name="spring-boot-bulking-canal" />
         <module name="spring-boot-bulking-rocketmq" />
@@ -31,6 +32,7 @@
       <module name="spring-boot-bulking-pulsar" options="-parameters" />
       <module name="spring-boot-bulking-rocketmq" options="-parameters" />
       <module name="spring-boot-bulking-tool" options="-parameters" />
+      <module name="spring-boot-bulking-zjy" options="-parameters" />
     </option>
   </component>
 </project>
