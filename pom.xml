@@ -17,7 +17,7 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>fantastzjy-study</module>
+        <module>fantastzjy-advance</module>
         <module>spring-boot-bulking-druid</module>
         <module>spring-boot-bulking-caffeine</module>
         <module>spring-boot-bulking-elasticsearch</module>
