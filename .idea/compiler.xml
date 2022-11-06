@@ -7,13 +7,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="spring-boot-bulking-generater" />
         <module name="spring-boot-bulking-pulsar" />
         <module name="spring-boot-bulking-elasticsearch" />
         <module name="spring-boot-bulking-druid" />
-        <module name="fantastzjy-study" />
         <module name="spring-boot-bulking-tool" />
+        <module name="fantastzjy-advance" />
         <module name="spring-boot-bulking-kafka" />
-        <module name="spring-boot-bulking-zjy" />
         <module name="spring-boot-bulking-caffeine" />
         <module name="spring-boot-bulking-canal" />
         <module name="spring-boot-bulking-rocketmq" />
@@ -23,16 +23,16 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="fantast_advance" options="" />
-      <module name="fantastzjy-study" options="-parameters" />
+      <module name="fantastzjy-advance" options="-parameters" />
       <module name="spring-boot-bulking-caffeine" options="-parameters" />
       <module name="spring-boot-bulking-canal" options="-parameters" />
       <module name="spring-boot-bulking-druid" options="-parameters" />
       <module name="spring-boot-bulking-elasticsearch" options="-parameters" />
+      <module name="spring-boot-bulking-generater" options="-parameters" />
       <module name="spring-boot-bulking-kafka" options="-parameters" />
       <module name="spring-boot-bulking-pulsar" options="-parameters" />
       <module name="spring-boot-bulking-rocketmq" options="-parameters" />
       <module name="spring-boot-bulking-tool" options="-parameters" />
-      <module name="spring-boot-bulking-zjy" options="-parameters" />
     </option>
   </component>
 </project>
