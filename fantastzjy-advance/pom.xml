@@ -8,11 +8,9 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>fantastzjy</groupId>
-    <artifactId>fantastzjy-study</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>fantastzjy-study</name>
-    <description>fantastzjy-study</description>
+    <artifactId>fantastzjy-advance</artifactId>
+    <packaging>jar</packaging>
+
     <properties>
         <java.version>1.8</java.version>
     </properties>
