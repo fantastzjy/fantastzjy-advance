@@ -4,6 +4,7 @@ import fantastzjy.leetcode.ListNode;
 
 public class T206_反转链表 {
 
+    //一句话：标记下一个，指向前一个，再丢掉前一个
     public ListNode reverseList(ListNode head) {
 
         ListNode pre = null;
@@ -26,28 +27,6 @@ public class T206_反转链表 {
         return pre;
     }
 
-    public ListNode reverseList2(ListNode head) {
-        if (head == null || head.next == null) {
-            return head;
-        }
-        ListNode pre = null;
-        ListNode curr = head;
-        ListNode next = head;
-
-        //while (curr.next!=null) {
-        while (curr != null) {
-            next = curr.next;
-            curr.next = pre;
-            pre = curr;
-            curr = next;
-        }
-
-
-        //return curr;
-        return pre;
-    }
-
-
     //反例
     //只会返回最后末尾的数  因为curr的指针没有指向前面  且会造成死循环 最后的头结点与第二个节点循环
     public ListNode reverseList错(ListNode head) {
@@ -67,7 +46,6 @@ public class T206_反转链表 {
 
         return curr;
     }
-
 }
 
 

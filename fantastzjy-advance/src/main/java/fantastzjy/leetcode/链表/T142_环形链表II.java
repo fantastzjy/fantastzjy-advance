@@ -40,6 +40,4 @@ public class T142_环形链表II {
 
         return fast;
     }
-
-
 }

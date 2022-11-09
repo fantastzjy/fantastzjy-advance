@@ -7,15 +7,12 @@ public class T92_反转链表II_ {
     public ListNode reverseBetween(ListNode head, int left, int right) {
 
         //思路：将两头保存，反转中间
-
         ListNode pre = null;
         ListNode pre2 = null;
         ListNode curr = head;
         ListNode curr2 = null;
 
-
         //找到头
-
         for (int i = 1; i < left; i++) {
             pre = curr;
             curr = curr.next;
@@ -29,7 +26,6 @@ public class T92_反转链表II_ {
             tail = tail.next;
         }
 
-
         //反转中间
         pre = null;
         while (curr != tail && curr != null) {
@@ -38,7 +34,6 @@ public class T92_反转链表II_ {
             pre = curr;
             curr = next;
         }
-
 
         //处理头尾
         //尾
@@ -52,7 +47,5 @@ public class T92_反转链表II_ {
         } else {
             return pre;
         }
-
-
     }
 }

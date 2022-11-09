@@ -1,6 +1,5 @@
 package fantastzjy.leetcode.链表;
 
-
 import fantastzjy.leetcode.ListNode;
 
 public class T160_相交链表 {
