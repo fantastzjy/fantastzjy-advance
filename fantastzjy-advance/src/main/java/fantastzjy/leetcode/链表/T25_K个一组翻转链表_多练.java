@@ -56,7 +56,6 @@ public class T25_K个一组翻转链表_多练 {
             start.next = next;
             //保证下一轮循环
             pre = start;
-
         }
 
         return dummy.next;
@@ -77,5 +76,4 @@ public class T25_K个一组翻转链表_多练 {
 
         return pre;
     }
-
 }

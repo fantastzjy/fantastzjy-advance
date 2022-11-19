@@ -16,7 +16,7 @@ public class T46_全排列 {
      */
     List<List<Integer>> permute(int[] nums) {
         // 记录「路径」
-        ArrayList<Integer> track = new ArrayList<>();
+        List<Integer> track = new ArrayList<>();
         //LinkedList<Integer> track = new LinkedList<>();
         backtrack(nums, track);
         return res;
@@ -25,7 +25,7 @@ public class T46_全排列 {
     // 路径：记录在 track 中
     // 选择列表：nums 中不存在于 track 的那些元素
     // 结束条件：nums 中的元素全都在 track 中出现
-    void backtrack(int[] nums, ArrayList<Integer> track) {
+    void backtrack(int[] nums, List<Integer> track) {
         // 触发结束条件
         //if (track.size() == track.size()) {  这个bug不可饶恕   敲代码时一定要小心
         if (track.size() == nums.length) {
@@ -38,7 +38,6 @@ public class T46_全排列 {
         }
 
         for (int i = 0; i < nums.length; i++) {
-
             //要放在循环里面才能取到具体的那个值
             //排除不合法的选择 剪枝
             if (track.contains(nums[i])) {

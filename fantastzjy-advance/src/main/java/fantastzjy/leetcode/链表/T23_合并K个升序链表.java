@@ -17,7 +17,7 @@ public class T23_合并K个升序链表 {
     }
 
     private ListNode merge(ListNode[] lists, int beg, int end) {
-        // basecase   如果beg end相等就是一个不用再分治
+        // basecase   如果beg end相等 则直接返回
         if (beg == end) {
             return lists[beg];
         }

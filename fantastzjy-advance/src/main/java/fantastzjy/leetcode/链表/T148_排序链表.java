@@ -14,9 +14,6 @@ public class T148_排序链表 {
     }
 
     public ListNode sortList(ListNode head, ListNode tail) {
-
-        //basecase
-
         if (head == null) {
             return head;
         }
@@ -27,8 +24,10 @@ public class T148_排序链表 {
             head.next = null;
             return head;
         }
-
-        //找中间值，
+        //找中间值，刚好是中间值
+        //      1
+        //1 2 3 4 5 6 7
+        //            2
         ListNode slow = head, fast = head;
         while (fast != tail) {
             slow = slow.next;
@@ -68,6 +67,4 @@ public class T148_排序链表 {
     }
 }
 
-
-//作者：LeetCode-Solution
 //链接：https://leetcode-cn.com/problems/sort-list/solution/pai-xu-lian-biao-by-leetcode-solution/
