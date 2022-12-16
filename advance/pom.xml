@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>fantastzjy</groupId>
-        <artifactId>fantast_advance</artifactId>
+        <artifactId>fantastzjy-advance</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>fantastzjy-advance</artifactId>
+    <artifactId>advance</artifactId>
     <packaging>jar</packaging>
 
     <properties>
