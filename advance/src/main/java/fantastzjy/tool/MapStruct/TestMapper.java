@@ -8,7 +8,7 @@ public interface TestMapper {
 
 	TestMapper INSTANCE = Mappers.getMapper(TestMapper.class);
 
-	ABO convertDtoToBo(ADTO ADTO);
+	ABO convertADtoToBo(ADTO ADTO);
 
-	CBO convertPersonDtoToBo(CDTO CDTO);
+	CBO convertCDtoToBo(CDTO CDTO);
 }
