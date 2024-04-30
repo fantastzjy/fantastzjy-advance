@@ -7,6 +7,7 @@ public class Main {
 	/**
 	 * 测试类型自动转换效果
 	 * 总结:https://juejin.cn/post/7333458486435987494
+	 * 拷贝效果,耗时对比/总结
 	 */
 
 	public static void main(String[] args) {
