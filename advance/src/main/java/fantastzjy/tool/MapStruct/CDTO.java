@@ -1,10 +1,11 @@
 package fantastzjy.tool.MapStruct;
 
 import lombok.Data;
+
 import java.io.Serializable;
 
 @Data
-public class LabelBO implements Serializable {
+public class CDTO implements Serializable {
 
-	private String labelName;
+	private String count;
 }
