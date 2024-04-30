@@ -7,5 +7,5 @@ import java.io.Serializable;
 @Data
 public class BDTO implements Serializable {
 
-	private String count;
+	private Integer count;
 }

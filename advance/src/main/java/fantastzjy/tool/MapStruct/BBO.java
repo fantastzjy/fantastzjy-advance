@@ -7,5 +7,5 @@ import java.io.Serializable;
 @Data
 public class BBO implements Serializable {
 
-	private Integer count;
+	private int count;
 }

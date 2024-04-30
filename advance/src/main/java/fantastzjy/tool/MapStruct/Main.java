@@ -32,15 +32,21 @@ public class Main {
 		System.out.println(cbo.getCount());
 
 		// ************************** 1 使用 BeanUtils **************************
+		// 1 属性类型不一致导致拷贝失败            A类中定义的类型为Long，在B类中定义的类型为String，会出现拷贝失败，导致对应的字段为null
+		// 2 同一字段分别使用包装类型和基本类型     在没有传递实际值的时候，会出现异常,ps若传递实际值会成功
+		//   注意，如果一个布尔类型的属性分别使用了基本类型和包装类型，且属性名如果使用is开头，例如isSuccess，也会导致拷贝失败
+		// 3 null值覆盖导致数据异常              被拷贝的数据里面如果某些字段有null值存在，但是对应的需要被拷贝过去的数据的相同字段的值并不为null，会出现被拷贝数据的null值覆盖拷贝目标数据的字段，导致原有的数据失效
+		// 4 底层实现为反射拷贝效率低
+		// 5 导包错误导致拷贝数据异常
+
+
 		// 若类型不一致,则转换结果为null,不会自动转化
 
 		BDTO bdto = new BDTO();
-		// bdto.setCount("33333");
+		// bdto.setCount(33333);
 
 		BBO bbo = new BBO();
-
 		BeanUtils.copyProperties(bdto, bbo);
-
 		System.out.println(bbo.getCount());
 	}
 
