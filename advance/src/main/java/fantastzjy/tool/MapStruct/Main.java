@@ -12,7 +12,7 @@ public class Main {
 	public static void main(String[] args) {
 
 		// ************************** 1 使用 MapStruct **************************
-		// 基本原理:查看 Mapper接口的实现类可知,会自动转换类型,也可指定为空时的转换规则,如下:
+		// 基本原理:使用预编译,在编译阶段自动生成Mapper接口实现类,查看实现类可知,会进行类型转换,且为空值时不会进行默认赋值,也可指定为空时的转换规则,如下:
 		// @Mapper(nullValueMappingStrategy = NullValueMappingStrategy.RETURN_NULL)     ：当源值为null时，返回null。这是默认行为。
 		// @Mapper(nullValueMappingStrategy = NullValueMappingStrategy.RETURN_DEFAULT)  ：当源值为null时，返回目标类型的默认实例。这对于避免在目标对象中得到null值特别有用。
 
@@ -82,5 +82,13 @@ public class Main {
 	 * 如果我们将`nullValueMappingStrategy`改为`RETURN_DEFAULT`，那么当`source`为`null`时，`sourceToTarget`方法会返回一个新的`Target`实例，其`value`字段为`null`（或基本类型字段为其对应的默认值）。
 	 *
 	 * 总的来说，选择哪种策略取决于你的具体需求，以及你如何希望在映射过程中处理`null`值。
+	 */
+
+	/**
+	 * 注意坑点：
+	 *  1 Mapper-struct同样也是浅拷贝，需要进行深拷贝，就写多个Converter把需要深拷贝的再转一次
+	 *
+	 * 2 跟lombok在配合的时候会出现问题，如果mapperStruct的依赖放在lombok的依赖上面的话就会出现在对象复制的时候，会将原有数据全变为null的情况.
+	 * 所以一定要将lombok的依赖放在mapperStruct上面
 	 */
 }
