@@ -29,7 +29,7 @@ public class T206_反转链表 {
 
     //反例
     //只会返回最后末尾的数  因为curr的指针没有指向前面  且会造成死循环 最后的头结点与第二个节点循环
-    public ListNode reverseList错(ListNode head) {
+    public ListNode reverseList1(ListNode head) {
         if (head == null || head.next == null) {
             return head;
 
@@ -45,6 +45,33 @@ public class T206_反转链表 {
         }
 
         return curr;
+    }
+
+    // 错2  pre初始指向head,导致head.next指向第二个节点,造成循环
+    // pre=null,curr=head,方便反转后的链表尾节点指向null
+    // 后面遇到链表的,pre=null,curr=head开始尝试
+    public ListNode reverseList2(ListNode head) {
+
+        if (head == null || head.next == null) {
+            return head;
+        }
+
+        ListNode pre = head;
+        ListNode curr = head.next;
+        ListNode next = null;
+
+        while (curr != null) {
+            // 标记下一个
+            next = curr.next;
+            // 指向上一个
+            curr.next = pre;
+            // 向前进一步
+            pre = curr;
+            // 向前进一步
+            curr = next;
+        }
+
+        return pre;
     }
 }
 
