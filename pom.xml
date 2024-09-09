@@ -27,6 +27,9 @@
         <module>spring-boot-bulking-tool</module>
         <module>spring-boot-bulking-canal</module>
 <!--        <module>spring-boot-bulking-generater</module>-->
+
+        <module>spring-advance</module>
+
     </modules>
 
     <repositories>
